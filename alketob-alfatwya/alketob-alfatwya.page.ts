@@ -31,21 +31,12 @@ export class AlketobAlfatwyaPage implements OnInit {
 
   constructor(private http: HttpClient,private transfer: FileTransfer,private fileOpener: FileOpener, private file: File,private storage: Storage,private nativePageTransitions: NativePageTransitions,public platform: Platform,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
 
-    this.title = getXMLDataPDF("title");
-    this.link = getXMLDataPDF("link");
+  
 
     this.platform.pause.subscribe(e => {
       this.loadingController.dismiss();
       console.log("pause event is working");
     });
-
-    var i =0;
-    for ( i=0; i< this.title.length; i++ ) {
-      var onebook =[];
-      onebook["title"] = this.title[i];
-      onebook["link"] = this.link[i];
-      this.book.push(onebook);
-    }
 
   }
   ionViewWillEnter(){
@@ -93,6 +84,17 @@ export class AlketobAlfatwyaPage implements OnInit {
 
   ngOnInit() {
 
+    const url= 'https://strapi.alsader.net/api/pdfs?filters[pdf_category][title][$eq]=kotobfetwaeya&populate=*'
+    this.http.get(url).subscribe((res)=>{
+      this.data = res
+      var i =0;
+      for ( i=0; i< this.data.data.length; i++ ) {
+       var array =[];
+       array["title"] = this.data.data[i].attributes.title;
+       array["link"] = this.data.data[i].attributes.link;
+       this.content.push(array);      
+      }
+    })
   }
   getlink(link:string){
     this.storage.get('pdfLink4').then(value => {
@@ -164,30 +166,3 @@ this.loadingController.dismiss();          })
   }
 }
 
-function getXMLDataPDF( itemname:string ) {
-  var request = new XMLHttpRequest();
-
-  try {
-    request.open('GET', 'assets/mawsuaat-xml/الفقه-قبل-الاستشهاد.xml', false);
-    request.send(null);
-  } catch (err) {
-    return '';
-  }
-
-  if (request.status === 200 || request.status === 0) {
-    var parser = new DOMParser();
-    var doc = parser.parseFromString(request.responseText, "application/xml");
-    var books = doc.getElementsByTagName("book");
-    var result = [];
-    for (var i = 0; i < books.length; i++) {
-      var book = books[i];
-
-      result.push(book.getElementsByTagName(itemname)[0].childNodes[0].nodeValue)
-    }
-
-    return result;
-  }
-
-  return '';
-
-}

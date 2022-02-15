@@ -13,6 +13,7 @@ import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/na
 import { Storage } from '@ionic/storage';
 import { DocumentViewer } from '@ionic-native/document-viewer/ngx';
 import {DocumentViewerOptions} from "@ionic-native/document-viewer";
+import { HttpClient } from "@angular/common/http";
 @Component({
   selector: 'app-akhlak-kabel-esteshhad',
   templateUrl: './akhlak-kabel-esteshhad.page.html',
@@ -21,30 +22,22 @@ import {DocumentViewerOptions} from "@ionic-native/document-viewer";
 export class AkhlakKabelEsteshhadPage implements OnInit {
 
   loaderToShow: any;
-  public title;
-  public link;
-  public book = [];
+  private data:any = [];
+  public title:any[] = [];
+  public content:any[] = [];
   isLoading = false;
 
   public ac: PdfViewerService = new PdfViewerService(new FileOpener,new FileTransfer,new File,new DocumentViewer,this.platform);
 
-  constructor(private storage: Storage,private nativePageTransitions: NativePageTransitions,public platform: Platform,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
-    this.title = getXMLDataPDF("title");
-    this.link = getXMLDataPDF("link");
+  constructor(private http: HttpClient,private storage: Storage,private nativePageTransitions: NativePageTransitions,public platform: Platform,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
+   
 
     this.platform.pause.subscribe(e => {
       this.loadingController.dismiss();
       console.log("pause event is working");
     });
 
-    var i =0;
-    for ( i=0; i< this.title.length; i++ ) {
-     var onebook =[];
-     onebook["title"] = this.title[i];
-     onebook["link"] = this.link[i];
-     this.book.push(onebook);
-    }
-
+    
   }
   ionViewWillEnter(){
     this.storage.clear();
@@ -78,6 +71,17 @@ export class AkhlakKabelEsteshhadPage implements OnInit {
 }
 
   ngOnInit() {
+    const url= 'https://strapi.alsader.net/api/pdfs?filters[pdf_category][title][$eq]=akhlak-kabel-estshhad&populate=*'
+    this.http.get(url).subscribe((res)=>{
+      this.data = res
+      var i =0;
+      for ( i=0; i< this.data.data.length; i++ ) {
+       var array =[];
+       array["title"] = this.data.data[i].attributes.title;
+       array["link"] = this.data.data[i].attributes.link;
+       this.content.push(array);      
+      }
+    })
 
   }
   moveToPage(pageName) {
@@ -129,30 +133,3 @@ this.loadingController.dismiss();          })
   }
 }
 
-function getXMLDataPDF( itemname:string ) {
-  var request = new XMLHttpRequest();
-
-  try {
-    request.open('GET', 'assets/mawsuaat-xml/الأخلاق-قبل-الاستشهاد.xml', false);
-    request.send(null);
-  } catch (err) {
-    return '';
-  }
-
-  if (request.status === 200 || request.status === 0) {
-    var parser = new DOMParser();
-    var doc = parser.parseFromString(request.responseText, "application/xml");
-    var books = doc.getElementsByTagName("book");
-    var result = [];
-    for (var i = 0; i < books.length; i++) {
-      var book = books[i];
-
-      result.push(book.getElementsByTagName(itemname)[0].childNodes[0].nodeValue)
-    }
-
-    return result;
-  }
-
-  return '';
-
-}
