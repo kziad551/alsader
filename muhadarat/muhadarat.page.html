@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="header-right">
+      <img src="\assets/headerimgs/voice-top.png" width="83" height="50" x="100">
+      <hr>
+    </div>
+    <div class="header-middle">
+      <img src="\assets/headerimgs/Logo.png"></div>
+
+    <div class="header-left">
+      <ion-menu-button autoHide="true" >  <img src="\assets/headerimgs/menu-bulets.png"   height="25"> </ion-menu-button>
+      <label class="page-title">محاضرات</label>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content >
+  <div (click)="moveToPage('aldurus-tafser')"  class="home-box" >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/voice-icon.png"  height="55">
+    </div>
+    <div  class="home-box-title">تفسير</div>
+  </div>
+  <div  (click)="moveToPage('alusul-akaed')"  class="home-box">
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/voice-icon.png"  height="55">
+    </div>
+    <div  class="home-box-title">تأريخ</div>
+  </div>
+</ion-content>

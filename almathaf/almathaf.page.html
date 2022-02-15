@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="header-right">
+      <img src="\assets/headerimgs/khotab-sayed-top.png" height="70" >
+      <hr>
+    </div>
+    
+    <div class="header-middle">
+      <img src="\assets/headerimgs/Logo.png"></div>
+    <div class="header-left">
+        <ion-menu-button autoHide="true" >  <img src="\assets/headerimgs/menu-bulets.png"   height="25"> </ion-menu-button> 
+       <label class="page-title"> {{ 'home12' | translate }}</label>
+    </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>  
+  <div (click)="moveToPage('almathaf-shahed')"  class="home-box" >
+    <div class="home-box-img">
+      <img class="icon"  src="\assets/headerimgs/mareyat-top.png" width="50" height="45">
+      </div>
+      <div  class="home-box-title">{{ 'See' | translate }} </div>
+  </div> 
+  <div (click)="moveToPage('almathaf-suwar')"  class="home-box" >
+    <div class="home-box-img">
+      <img class="icon"  src="\assets/headerimgs/alsuwar-box.png" width="50" height="45">
+      </div>
+      <div  class="home-box-title">{{ 'Pictures' | translate }}  </div>
+  </div> 
+</ion-content>

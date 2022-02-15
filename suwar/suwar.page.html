@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="header-right">
+      <img src="\assets/headerimgs/alsuwar-box.png" height="50" >
+      <hr>
+    </div>
+    
+    <div class="header-middle">
+      <img src="\assets/headerimgs/Logo.png"></div>
+    <div class="header-left">
+        <ion-menu-button autoHide="true" >  <img src="\assets/headerimgs/menu-bulets.png"   height="25"> </ion-menu-button> 
+       <label class="page-title"> الصور</label>
+    </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>  
+       <div class="images">
+  <div class="one-image" >
+    <div class="imageContainer" (click)="moveToPage('sayed-barani-img')">  <span>  {{ 'barani' | translate }}</span></div>
+    <div class="imageContainer" (click)="moveToPage('sayed-maarad-img')"> <span>   {{ 'maarad' | translate }}</span></div>
+    <!--<div class="imageContainer" (click)="moveToPage('sayed-salatjmaa-img')">  <span>  {{ 'salatjmmaa' | translate }}</span></div>-->
+    <div class="imageContainer" (click)="moveToPage('sayed-tufula-img')">  <span>  {{ 'tufula' | translate }}</span></div>
+    <div class="imageContainer" (click)="moveToPage('sayed-masjedkufa-img')"> <span>   {{ 'masjed' | translate }}</span></div>
+    <div class="imageContainer" (click)="moveToPage('sayed-munfareda-img')"> <span>   {{ 'sayedmhmd' | translate }}</span></div>
+    <div class="imageContainer" (click)="moveToPage('sayed-marhalederasa-img')">  <span>  {{ 'marahaladerasa' | translate }}</span></div>
+    <div class="imageContainer" (click)="moveToPage('sayed-majamaher-img')"> <span>   {{ 'ma3jamaher' | translate }}</span></div>
+    <div class="imageContainer" (click)="moveToPage('sayed-maashahedawal-img')"> <span>   {{ 'shahedawal' | translate }}</span></div>
+    <div class="imageContainer" (click)="moveToPage('sayed-maawlado-img')">  <span>  {{ 'awlado' | translate }}</span></div>
+    <div class="imageContainer" (click)="moveToPage('sayed-mashakhsyat-img')"> <span>   {{ 'baadshakhsyat' | translate }}</span></div>
+    <div class="imageContainer" (click)="moveToPage('sayed-matalabateh-img')"> <span>   {{ 'talabeteh' | translate }}</span></div>
+    <div class="imageContainer" (click)="moveToPage('sayed-mawaladeh-img')">  <span>  {{ 'waledu' | translate }}</span></div>
+    <div class="imageContainer" (click)="moveToPage('sayed-markadalamer-img')">  <span>  {{ 'salatjmmaamarkad' | translate }}</span></div>
+    <div class="imageContainer hiddenimg"></div>
+  </div>
+   </div> 
+  
+</ion-content>

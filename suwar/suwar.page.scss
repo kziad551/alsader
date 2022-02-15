@@ -1,0 +1,52 @@
+
+@media (min-width: 0px) {
+  .images {
+      column-count: 2;
+      margin-bottom: 25px;
+  }
+}
+
+@media (min-width: 420px) {
+  .images {
+      column-count: 3;   
+  }
+}
+
+@media (min-width: 720px) {
+  .images {
+      column-count: 4;    
+  }
+}
+.one-image img{margin-top: -5px;
+  max-width: 100%;
+  position: relative;
+  top: 23px !important;}
+.one-image {
+  margin: 0px; 
+}
+.image-container {
+  min-height: 200px;
+  background-size: cover;
+}
+.header-right img{    height: 72.7px;}
+.imageContainer {
+  background-image: url(https://alsader.net/wp-content/uploads/2021/01/suwar-background.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 194px;
+  height: 268px;
+  text-align: center;
+  position: relative;
+  display: flex
+}
+.imageContainer span {
+  position: absolute;
+  width: 100%;
+  bottom: 37px;
+  font-size: 22px;
+  line-height: 28px;
+}
+.imageContainer.hiddenimg {
+  background: none;
+}
+

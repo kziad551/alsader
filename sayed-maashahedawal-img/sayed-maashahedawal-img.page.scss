@@ -1,0 +1,36 @@
+
+@media (min-width: 0px) {
+  .images {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 420px) {
+  .images {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 720px) {
+  .images {
+    column-count: 4;
+  }
+}
+.one-image img{margin-top: -5px;
+  max-width: 107%;
+  position: relative;
+  top: 23px !important;}
+.one-image {
+  margin: 0px;
+}
+.image-container {
+  min-height: 200px;
+  background-size: cover;
+}
+
+
+.header-right img{    height: 72.7px;}
+.images.hidden-pics {
+  position: absolute;
+  top: -200px;
+}

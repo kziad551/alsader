@@ -1,0 +1,55 @@
+
+
+ .home-box-title {
+    position: relative;
+     right: -26px;
+     color: #fff;
+     top: -21px;
+     width: 225px;
+     font-size: 19px;
+ }
+ .home-box-img {
+    position: relative;
+     left: 119px;
+     top: 10px;
+     height: 44px;
+ }
+ .header-right img {
+   float: right;
+   position: relative;
+   right: -4px;
+   top: 7px;
+   height: 112px;
+ } 
+ .title {
+    color: #ff8400;
+    position: relative;
+    text-align: center;
+    font-size: 28px;
+}
+ p {
+    color: #fff;
+    font-size: 20px;
+    direction: rtl;
+    padding: 0 39px;
+    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 1px 1px 2px black, 0 0 7px blue, 0 0 5px darkblue;
+}
+button{  height: 2.8em;
+
+    width: 9rem;
+    border-radius: 44px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #387ef5;
+    margin: 0.4rem 1.2rem;
+    
+    box-shadow: 0 8px 16px 0 rgba(110, 110, 110, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+    .button-accpet {
+        direction: rtl;
+        text-align: center;
+    }button.agree {
+    background-color: #f53d3d;
+}

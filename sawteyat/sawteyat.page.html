@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="header-right">
+      <img src="\assets/headerimgs/sawteyat-top.png"  >
+      <hr>
+    </div>
+    
+    <div class="header-middle">
+      <img src="\assets/headerimgs/Logo.png"></div>
+    <div class="header-left">
+        <ion-menu-button autoHide="true" >  <img src="\assets/headerimgs/menu-bulets.png"   height="25"> </ion-menu-button> 
+       <label class="page-title"> الصوتيات</label>
+    </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>  
+       
+    <div (click)="moveToPage('aldurus')" class="home-box" >
+      <div class="home-box-img">
+        <img  src="\assets/headerimgs/sawteyat-icon.png" width="50" height="55">
+        </div>
+        <div  class="home-box-title">الدروس</div>
+    </div>
+    <div (click)="moveToPage('mawaez')" class="home-box" >
+      <div class="home-box-img">
+        <img  src="\assets/headerimgs/sawteyat-icon.png" width="50" height="55">
+        </div>
+        <div  class="home-box-title">المواعظ</div>
+    </div>
+    <div (click)="moveToPage('lekaat')" class="home-box" >
+      <div class="home-box-img">
+        <img  src="\assets/headerimgs/sawteyat-icon.png" width="50" height="55">
+        </div>
+        <div  class="home-box-title">اللقاءات</div>
+    </div>
+</ion-content>

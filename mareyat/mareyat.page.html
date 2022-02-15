@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="header-right">
+      <img src="\assets/headerimgs/mareyat-top.png" height="70" >
+      <hr>
+    </div>
+    
+    <div class="header-middle">
+      <img src="\assets/headerimgs/Logo.png"></div>
+    <div class="header-left">
+        <ion-menu-button autoHide="true" >  <img src="\assets/headerimgs/menu-bulets.png"   height="25"> </ion-menu-button>  
+       <label class="page-title"> المرئيات</label>
+    </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>  
+    
+    
+    <div  (click)="moveToPage('khotabalsayed')" class="home-box" >
+      <div class="home-box-img">
+        <img class="khtb-jmaa-icon"  src="\assets/headerimgs/khotab-jmaa-icon.png">
+        </div>
+        <div  class="home-box-title">خطب الجمعة</div>
+    </div>
+    <div (click)="moveToPage('lekaatmareya')" class="home-box" >
+      <div class="home-box-img">
+        <img  src="\assets/headerimgs/lekaat-video-icon.png">
+        </div>
+        <div  class="home-box-title">اللقاءات المرئية</div>
+    </div>
+    <!-- <div  (click)="moveToPage('wasaekyat')" class="home-box" >
+      <div class="home-box-img">
+        <img  src="\assets/headerimgs/wasaekyat-icon.png">
+        </div>
+        <div  class="home-box-title">الوثائقيات</div>
+    </div> -->
+</ion-content>
+

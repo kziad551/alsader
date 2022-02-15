@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="header-right">
+      <img src="\assets/headerimgs/voice-top.png" width="83" height="50" x="100">
+      <hr>
+    </div>
+    
+    <div class="header-middle">
+      <img src="\assets/headerimgs/Logo.png"></div>
+
+    <div class="header-left">
+        <ion-menu-button autoHide="true" >  <img src="\assets/headerimgs/menu-bulets.png"   height="25"> </ion-menu-button> 
+       <label class="page-title"> الأصول</label>
+    </div>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-fab  [hidden]="forwardshow" (click)="forwardLink()"  bottom right #fab>
+        <button ion-fab>
+            <ion-icon   name="ios-redo"></ion-icon>
+        </button>
+    </ion-fab>
+
+  <div (click)="streamaudio('https://vps.alsader.net/%D8%A7%D9%84%D8%AF%D8%B1%D9%88%D8%B3/%D8%A7%D9%84%D8%A7%D8%B5%D9%88%D9%84/%D8%A7%D8%B5%D9%88%D9%84%20%D8%B3%D9%86%D8%A9%2014216/1-%20%D8%B4%D9%87%D8%B1%20%D9%85%D8%AD%D8%B1%D9%85/18%D9%85%D8%AD%D8%B1%D9%85_1416%D8%A7%D9%84%D8%B3%D8%A8%D8%AA/%D8%A7%D9%84%D8%B3%D8%A8%D8%AA%20%2018%20%D9%85%D8%AD%D8%B1%D9%85%20%201416.mp3')"  class="home-box" >  
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+      </div>
+      <div  class="home-box-title"> السبت ١٨ محرم ١٤١٦  </div>
+   </div>
+   <div (click)="streamaudio('https://vps.alsader.net/%D8%A7%D9%84%D8%AF%D8%B1%D9%88%D8%B3/%D8%A7%D9%84%D8%A7%D8%B5%D9%88%D9%84/%D8%A7%D8%B5%D9%88%D9%84%20%D8%B3%D9%86%D8%A9%2014216/1-%20%D8%B4%D9%87%D8%B1%20%D9%85%D8%AD%D8%B1%D9%85/19%D9%85%D8%AD%D8%B1%D9%85_1416%D8%A7%D9%84%D8%A7%D8%AD%D8%AF/%D8%A7%D9%84%D8%A7%D8%AD%D8%AF%20%2019%20%D9%85%D8%AD%D8%B1%D9%85%20%201416.mp3')"  class="home-box" >  
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+      </div>
+      <div  class="home-box-title"> الأحد ١٩ محرم ١٤١٦  </div>
+   </div>
+   <div (click)="streamaudio('https://vps.alsader.net/%D8%A7%D9%84%D8%AF%D8%B1%D9%88%D8%B3/%D8%A7%D9%84%D8%A7%D8%B5%D9%88%D9%84/%D8%A7%D8%B5%D9%88%D9%84%20%D8%B3%D9%86%D8%A9%2014216/1-%20%D8%B4%D9%87%D8%B1%20%D9%85%D8%AD%D8%B1%D9%85/21%D9%85%D8%AD%D8%B1%D9%85_1416%D8%A7%D9%84%D8%AB%D9%84%D8%A7%D8%AB%D8%A7%D8%A1/%D8%A7%D9%84%D8%AB%D9%84%D8%A7%D8%AB%D8%A7%D8%A1%2021%20%D9%85%D8%AD%D8%B1%D9%85%20%201416.mp3')"  class="home-box" >  
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+      </div>
+      <div  class="home-box-title"> الثلاثاء ٢١ محرم ١٤١٦  </div>
+   </div>
+   <div (click)="streamaudio('https://vps.alsader.net/%D8%A7%D9%84%D8%AF%D8%B1%D9%88%D8%B3/%D8%A7%D9%84%D8%A7%D8%B5%D9%88%D9%84/%D8%A7%D8%B5%D9%88%D9%84%20%D8%B3%D9%86%D8%A9%2014216/1-%20%D8%B4%D9%87%D8%B1%20%D9%85%D8%AD%D8%B1%D9%85/22%D9%85%D8%AD%D8%B1%D9%85_1416%D8%A7%D9%84%D8%A7%D8%B1%D8%A8%D8%B9%D8%A7%D8%A1/%D8%A7%D9%84%D8%A7%D8%B1%D8%A8%D8%B9%D8%A7%D8%A1%20%2022%20%D9%85%D8%AD%D8%B1%D9%85%20%201416.mp3')"  class="home-box" >  
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+      </div>
+      <div  class="home-box-title"> الأربعاء ٢٢ محرم ١٤١٦  </div>
+   </div>
+   <div (click)="streamaudio('https://vps.alsader.net/%D8%A7%D9%84%D8%AF%D8%B1%D9%88%D8%B3/%D8%A7%D9%84%D8%A7%D8%B5%D9%88%D9%84/%D8%A7%D8%B5%D9%88%D9%84%20%D8%B3%D9%86%D8%A9%2014216/1-%20%D8%B4%D9%87%D8%B1%20%D9%85%D8%AD%D8%B1%D9%85/26%D9%85%D8%AD%D8%B1%D9%85_1416%D8%A7%D9%84%D8%A7%D8%AD%D8%AF/%D8%A7%D9%84%D8%A7%D8%AD%D8%AF%20%2026%20%D9%85%D8%AD%D8%B1%D9%85%20%201416.mp3')"  class="home-box" >  
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+      </div>
+      <div  class="home-box-title"> الأحد ٢٦ محرم ١٤١٦ 	 </div>
+   </div>
+   <div (click)="streamaudio('https://vps.alsader.net/%D8%A7%D9%84%D8%AF%D8%B1%D9%88%D8%B3/%D8%A7%D9%84%D8%A7%D8%B5%D9%88%D9%84/%D8%A7%D8%B5%D9%88%D9%84%20%D8%B3%D9%86%D8%A9%2014216/1-%20%D8%B4%D9%87%D8%B1%20%D9%85%D8%AD%D8%B1%D9%85/27%D9%85%D8%AD%D8%B1%D9%85_1416%D8%A7%D9%84%D8%A7%D8%AB%D9%86%D9%8A%D9%86/%D8%A7%D9%84%D8%A7%D8%AB%D9%86%D9%8A%D9%86%2027%20%D9%85%D8%AD%D8%B1%D9%85%20%201416.mp3')"  class="home-box" >  
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+      </div>
+      <div  class="home-box-title"> الإثنين ٢٧ محرم ١٤١٦  </div>
+   </div>
+   <div (click)="streamaudio('https://vps.alsader.net/%D8%A7%D9%84%D8%AF%D8%B1%D9%88%D8%B3/%D8%A7%D9%84%D8%A7%D8%B5%D9%88%D9%84/%D8%A7%D8%B5%D9%88%D9%84%20%D8%B3%D9%86%D8%A9%2014216/1-%20%D8%B4%D9%87%D8%B1%20%D9%85%D8%AD%D8%B1%D9%85/28%D9%85%D8%AD%D8%B1%D9%85_1416%D8%A7%D9%84%D8%AB%D9%84%D8%A7%D8%AB%D8%A7%D8%A1/%D8%A7%D9%84%D8%AB%D9%84%D8%A7%D8%AB%D8%A7%D8%A1%20%2028%20%D9%85%D8%AD%D8%B1%D9%85%20%201416.mp3')"  class="home-box" >  
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+      </div>
+      <div  class="home-box-title"> الثلاثاء ٢٨ محرم ١٤١٦  </div>
+   </div>
+   <div (click)="streamaudio('https://vps.alsader.net/%D8%A7%D9%84%D8%AF%D8%B1%D9%88%D8%B3/%D8%A7%D9%84%D8%A7%D8%B5%D9%88%D9%84/%D8%A7%D8%B5%D9%88%D9%84%20%D8%B3%D9%86%D8%A9%2014216/1-%20%D8%B4%D9%87%D8%B1%20%D9%85%D8%AD%D8%B1%D9%85/29%D9%85%D8%AD%D8%B1%D9%85_1416%D8%A7%D9%84%D8%A7%D8%B1%D8%A8%D8%B9%D8%A7%D8%A1/%D8%A7%D9%84%D8%A7%D8%B1%D8%A8%D8%B9%D8%A7%D8%A1%2029%20%D9%85%D8%AD%D8%B1%D9%85%20%201416.mp3')"  class="home-box" >  
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+      </div>
+      <div  class="home-box-title"> الأربعاء ٢٩ محرم ١٤١٦ 	 </div>
+   </div>
+  
+</ion-content>

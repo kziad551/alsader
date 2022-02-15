@@ -1,0 +1,27 @@
+ion-grid {
+  height: 100%;
+  z-index: 999;
+  position: fixed;
+  background: #131313;
+}
+ion-grid {
+  height: 100%;
+}
+ion-col {
+  color: #ffffff;
+  font-size: 32px;
+}
+.moveto {
+  font-size: 32px;
+  background-color: #0c89a4 !important;
+  height: 55px;
+  border-radius: 7px;
+  width: 30%;
+  margin: 9% 50% 0 35%;
+}
+.pop-class {
+  margin-top: 50%;
+}
+ion-router-outlet#content1 {
+  z-index: 9999!important;
+}

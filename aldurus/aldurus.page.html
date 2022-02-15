@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="header-right">
+      <img src="\assets/headerimgs/voice-top.png" width="83" height="50" x="100">
+      <hr>
+    </div>
+
+    <div class="header-middle">
+      <img src="\assets/headerimgs/Logo.png"></div>
+
+    <div class="header-left">
+        <ion-menu-button autoHide="true" >  <img src="\assets/headerimgs/menu-bulets.png"   height="25"> </ion-menu-button>
+       <label class="page-title"> {{ 'home6' | translate }}</label>
+    </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content >
+    <ion-fab  [hidden]="forwardshow" (click)="forward()"  bottom right #fab>
+        <button ion-fab>
+            <ion-icon   name="ios-redo"></ion-icon>
+        </button>
+    </ion-fab>
+    <div [hidden]="spinnertimeout" id="custom-overlay"><img src="/assets/headerimgs/spinner.gif"></div>
+    <div [hidden]="datatimeout">
+  <ion-searchbar debounce={1000} animated  placeholder="{{ 'search' | translate }}" (ionInput)="getTopics($event)"></ion-searchbar>
+<h2 class="search-result-title" [hidden]="searchClicked">{{ 'searchresult' | translate }}</h2>
+<div  [hidden]="searchClicked"  id="search-books" (click)="streamaudio(v.link)"   class="home-box" *ngFor="let v of voice">
+  <div class="home-box-img">
+    <img  src="\assets/headerimgs/voice-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ v.title }}</div>
+ </div>
+    </div>
+    <div [hidden]="searchNotClicked" (click)="moveToPage('bahes-alkharej')"  class="home-box" >
+        <div class="home-box-img">
+            <img  src="\assets/headerimgs/voice-icon.png"  height="55">
+        </div>
+        <div  class="home-box-title">{{ 'baheskharej' | translate }}</div>
+    </div>
+    <div [hidden]="searchNotClicked" (click)="moveToPage('muhadarat')"  class="home-box" >
+        <div class="home-box-img">
+            <img  src="\assets/headerimgs/voice-icon.png"  height="55">
+        </div>
+        <div  class="home-box-title">{{ 'muhadarat' | translate }}</div>
+    </div>
+    <div  [hidden]="searchNotClicked" (click)="moveToPage('aldurus-kefaya')" class="home-box" >
+      <div class="home-box-img">
+        <img  src="\assets/headerimgs/voice-icon.png"  height="55">
+        </div>
+        <div  class="home-box-title">{{ 'kefaya' | translate }}</div>
+    </div>
+</ion-content>

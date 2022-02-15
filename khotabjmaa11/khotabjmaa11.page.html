@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar>
+      <div class="header-right">
+        <img src="\assets/headerimgs/masaelhead.png" height="70" >
+        <hr>
+      </div>
+      
+      <div class="header-middle">
+        <img src="\assets/headerimgs/Logo.png"></div>
+      <div class="header-left">
+          <ion-menu-button autoHide="true" >  <img src="\assets/headerimgs/menu-bulets.png"   height="25"> </ion-menu-button> 
+         <label class="page-title">{{ 'jmaa11' | translate }}</label>
+      </div>
+      </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+      <div *ngFor="let k of khotab"  class="text-content">
+    <h2>{{k.title}}</h2>
+    <h3>الخطبة الاولى</h3>  
+    <p>{{k.text1}}</p>
+    <h3>الخطبة الثانية</h3>
+    <p>{{k.text2}}</p>
+  </div>
+  </ion-content>

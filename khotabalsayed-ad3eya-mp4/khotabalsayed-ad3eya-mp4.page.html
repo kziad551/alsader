@@ -1,0 +1,294 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="header-right">
+      <img src="\assets/headerimgs/khotab-sayed-top.png" height="70" >
+      <hr>
+    </div>
+
+    <div class="header-middle">
+      <img src="\assets/headerimgs/Logo.png"></div>
+    <div class="header-left">
+      <ion-menu-button autoHide="true" >  <img src="\assets/headerimgs/menu-bulets.png"   height="25"> </ion-menu-button>
+      <label class="page-title"> {{ 'See' | translate }}</label>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab  [hidden]="forwardshow" (click)="forwardLink()"  bottom right #fab>
+    <button ion-fab>
+      <ion-icon   name="ios-redo"></ion-icon>
+    </button>
+  </ion-fab>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/1.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/1.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa1' | translate }}</div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/2.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/2.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa2' | translate }}</div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/3.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/3.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa3' | translate }}</div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/4.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/4.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa4' | translate }}</div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/5.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/5.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa5' | translate }}</div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/6.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/6.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa6' | translate }}</div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/7.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/7.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa7' | translate }}</div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/8.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/8.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa8' | translate }}</div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/9.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/9.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa9' | translate }}</div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/10.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/10.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa10' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/11.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/11.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa11' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/12.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/12.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa12' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/13.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/13.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa13' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/14.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/14.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa14' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/15.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/15.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa15' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/16.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/16.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa16' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/17.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/17.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa17' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/18.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/18.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa18' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/19.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/19.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa19' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/20.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/20.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa20' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/21.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/21.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa21' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/22.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/22.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa22' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/23.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/23.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa23' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/24.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/24.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa24' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/25.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/25.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa25' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/26.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/26.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa26' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/27.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/27.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa27' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/28.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/28.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa28' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/29.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/29.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa29' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/30.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/30.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa30' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/31.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/31.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa31' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/32.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/32.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa32' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/33.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/33.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa33' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/34.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/34.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa34' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/35.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/35.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa35' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/36.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/36.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa36' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/37.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/37.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa37' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/38.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/38.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa38' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/39.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/39.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa39' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/40.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/40.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa40' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/41.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/41.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa41' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/42.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/42.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa42' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/43.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/43.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa43' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/44.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/44.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa44' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/45.mp4')" (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%B4%D8%A7%D9%87%D8%AF/45.mp4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa45' | translate }} </div>
+  </div>
+</ion-content>
+

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="header-right">
+      <img src="\assets/headerimgs/wasaekyat-top.png" height="70" >
+      <hr>
+    </div>
+
+    <div class="header-middle">
+      <img src="\assets/headerimgs/Logo.png"></div>
+    <div class="header-left">
+        <ion-menu-button autoHide="true" >  <img src="\assets/headerimgs/menu-bulets.png"   height="25"> </ion-menu-button>
+       <label class="page-title">  لقاء  الدراجي</label>
+    </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div (click)="streamvideo('https://dl.dropboxusercontent.com/s/h0v1syt3zzm4g4u/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AF%D8%B1%D8%A7%D8%AC%D9%8A%20%D8%AC1.mp4?dl=0')" class="home-box" >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/wasaekyatvideo-icon.png" width="50" height="45">
+      </div>
+      <div  class="home-box-title">  لقاء  الدراجي  {{ 'c' | translate }} ( {{ '1' | translate }} )  </div>
+  </div>
+    <div (click)="streamvideo('https://dl.dropboxusercontent.com/s/ld5uuxqp4xcl7ki/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AF%D8%B1%D8%A7%D8%AC%D9%8A%20%D8%AC%202%28%D9%85%D8%B6%D8%BA%D9%88%D8%B7%29.mp4')" class="home-box" >
+      <div class="home-box-img">
+        <img  src="\assets/headerimgs/wasaekyatvideo-icon.png" width="50" height="45">
+        </div>
+        <div  class="home-box-title"> لقاء  الدراجي   {{ 'c' | translate }} (  {{ '2' | translate }} )  </div>
+    </div>
+
+
+
+</ion-content>

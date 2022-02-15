@@ -1,0 +1,293 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="header-right">
+      <img src="\assets/headerimgs/khotab-sayed-top.png" width="83" height="50" x="100">
+      <hr>
+    </div>
+
+    <div class="header-middle">
+      <img src="\assets/headerimgs/Logo.png"></div>
+
+    <div class="header-left">
+      <ion-menu-button autoHide="true" >  <img src="\assets/headerimgs/menu-bulets.png"   height="25"> </ion-menu-button>
+      <label class="page-title"> {{ 'listen' | translate }} </label>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-fab  [hidden]="forwardshow" (click)="forwardLink()"  bottom right #fab>
+    <button ion-fab>
+      <ion-icon   name="ios-redo"></ion-icon>
+    </button>
+  </ion-fab>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/1.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/1.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa1' | translate }}</div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/2.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/2.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa2' | translate }}</div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/3.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/3.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa3' | translate }}</div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/4.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/4.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa4' | translate }}</div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/5.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/5.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa5' | translate }}</div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/6.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/6.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa6' | translate }}</div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/7.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/7.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa7' | translate }}</div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/8.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/8.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa8' | translate }}</div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/9.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/9.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa9' | translate }}</div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/10.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/10.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa10' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/11.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/11.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa11' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/12.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/12.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa12' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/13.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/13.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa13' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/14.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/14.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa14' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/15.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/15.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa15' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/16.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/16.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa16' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/17.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/17.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa17' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/18.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/18.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa18' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/19.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/19.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa19' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/20.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/20.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa20' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/21.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/21.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa21' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/22.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/22.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa22' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/23.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/23.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa23' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/24.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/24.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa24' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/25.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/25.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa25' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/26.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/26.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa26' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/27.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/27.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa27' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/28.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/28.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa28' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/29.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/29.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa29' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/30.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/30.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa30' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/31.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9//31.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa31' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/32.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/32.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa32' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/33.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/33.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa33' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/34.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/34.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa34' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/35.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/35.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa35' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/36.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/36.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa36' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/37.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/37.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa37' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/38.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/38.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa38' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/39.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/39.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa39' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/40.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/40.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa40' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/41.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/41.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa41' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/42.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/42.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa42' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/43.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/43.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa43' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/44.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/44.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa44' | translate }} </div>
+  </div>
+  <div  (click)="getlink('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/45.mp3')" (click)="streamaudio('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D8%A7%D8%AF%D8%B9%D9%8A%D8%A9/%D8%A7%D8%B3%D9%85%D8%B9/45.mp3')" class="home-box"   >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa45' | translate }} </div>
+  </div>
+</ion-content>

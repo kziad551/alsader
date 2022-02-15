@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar >
+    <div class="header-right">
+      <img src="\assets/headerimgs/sayed-top-header.png" height="100">
+      <hr>
+    </div>
+    
+    <div class="header-middle">
+      <img src="\assets/headerimgs/Logo.png">
+    </div>
+
+    <div class="header-left">
+        <ion-menu-button autoHide="true" >  <img src="\assets/headerimgs/menu-bulets.png"   height="25"> </ion-menu-button> 
+    </div>
+    </ion-toolbar>  
+</ion-header>
+<ion-content>
+  <h2 class="title">{{ 'mualafatnotetitle' | translate }}</h2>
+  <p>{{ 'mualafatnot' | translate }} </p>
+  <div class="button-accpet">
+  <button class="agree" (click)="moveToPage('mualafat')" ion-button color="light">{{ 'mualafatnoteagree' | translate }}</button>
+  <button class="no-agree"  (click)="moveToPage('home')" ion-button color="dark">{{ 'mualafatnotediagree' | translate }}</button>
+</div>
+</ion-content>
+
+

@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="header-right">
+      <img src="\assets/headerimgs/lekaat-top.png"  height="50">
+      <hr>
+    </div>
+
+    <div class="header-middle">
+      <img src="\assets/headerimgs/Logo.png"></div>
+
+    <div class="header-left">
+      <ion-menu-button autoHide="true" >  <img src="\assets/headerimgs/menu-bulets.png"   height="25"> </ion-menu-button>
+       <label class="page-title">{{ 'lekaatsawtya' | translate }}</label>
+    </div>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-fab  [hidden]="forwardshow" (click)="forwardLink()"  bottom right #fab>
+        <button ion-fab>
+            <ion-icon   name="ios-redo"></ion-icon>
+        </button>
+    </ion-fab>
+<!--  <div (click)="getlink('https://dl.dropboxusercontent.com/s/rq4xkjtelrvl89z/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B3%D9%8A%D9%91%D8%AF%20%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%AF%20%D9%82%D8%AF%D8%B3%20%D8%B3%D8%B1%D9%87%20%D9%85%D8%B9%20%D8%A3%D8%A6%D9%85%D8%A9%20%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9%20%D9%81%D9%8A%20%D8%B9%D9%85%D9%88%D9%85%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A7%D9%82.mp3?dl=0')" (click)="streamaudio('https://dl.dropboxusercontent.com/s/rq4xkjtelrvl89z/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B3%D9%8A%D9%91%D8%AF%20%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%AF%20%D9%82%D8%AF%D8%B3%20%D8%B3%D8%B1%D9%87%20%D9%85%D8%B9%20%D8%A3%D8%A6%D9%85%D8%A9%20%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9%20%D9%81%D9%8A%20%D8%B9%D9%85%D9%88%D9%85%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A7%D9%82.mp3?dl=0')"  class="home-box" >-->
+<!--    <div class="home-box-img">-->
+<!--      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">-->
+<!--      </div>-->
+<!--      <div  class="home-box-title">لقاء السيّد الشهيد (قدس سره) مع أئمة الجمعة في عموم العراق</div>-->
+<!--   </div>-->
+<!--   <div (click)="getlink('https://dl.dropboxusercontent.com/s/mldzlkr5w5yna31/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B3%D9%8A%D8%AF%20%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%AF%20%D9%82%D8%AF%D8%B3%20%D8%B3%D8%B1%D9%87%20%D9%85%D8%B9%20%D8%A3%D8%B9%D8%B6%D8%A7%D8%A1%20%D9%85%D9%83%D8%AA%D8%A8%D9%87%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%86%D8%AC%D9%81.mp3?dl=0')"  (click)="streamaudio('https://dl.dropboxusercontent.com/s/mldzlkr5w5yna31/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B3%D9%8A%D8%AF%20%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%AF%20%D9%82%D8%AF%D8%B3%20%D8%B3%D8%B1%D9%87%20%D9%85%D8%B9%20%D8%A3%D8%B9%D8%B6%D8%A7%D8%A1%20%D9%85%D9%83%D8%AA%D8%A8%D9%87%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%86%D8%AC%D9%81.mp3?dl=0')"  class="home-box" >-->
+<!--     <div class="home-box-img">-->
+<!--       <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">-->
+<!--       </div>-->
+<!--       <div  class="home-box-title">لقاء السيد الشهيد (قدس سره) مع أعضاء مكتبه في النجف</div>-->
+<!--    </div>-->
+    <div (click)="getlink('https://vps.alsader.net/%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA/%D8%A7%D8%B3%D8%AA%D9%85%D8%B9/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B3%D9%8A%D8%AF%20%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%AF%20%D9%82%D8%AF%D8%B3%20%D8%B3%D8%B1%D9%87%20%D9%85%D8%B9%20%D8%A7%D9%84%D9%85%D8%AA%D9%88%D9%84%D9%8A%D9%86%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%AF%D8%A7%D8%B1%D8%B3%20%D8%A7%D9%84%D8%AF%D9%8A%D9%86%D9%8A%D8%A9.mp3')"   (click)="streamaudio('https://vps.alsader.net/%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA/%D8%A7%D8%B3%D8%AA%D9%85%D8%B9/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B3%D9%8A%D8%AF%20%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%AF%20%D9%82%D8%AF%D8%B3%20%D8%B3%D8%B1%D9%87%20%D9%85%D8%B9%20%D8%A7%D9%84%D9%85%D8%AA%D9%88%D9%84%D9%8A%D9%86%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D9%85%D8%AF%D8%A7%D8%B1%D8%B3%20%D8%A7%D9%84%D8%AF%D9%8A%D9%86%D9%8A%D8%A9.mp3')"  class="home-box" >
+      <div class="home-box-img">
+        <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+        </div>
+        <div  class="home-box-title">لقاء السيد الشهيد (قدس سره) مع المتولين على المدارس الدينية</div>
+     </div>
+     <div (click)="getlink('https://vps.alsader.net/%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA/%D8%A7%D8%B3%D8%AA%D9%85%D8%B9/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B4%D9%8A%D8%AE%20%D8%B3%D8%AA%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A8%D9%87%D8%A7%D8%AF%D9%84%D9%8A%20%D8%A8%D8%A7%D9%84%D8%B3%D9%8A%D8%AF%20%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%AF%20%D9%82%D8%AF%D8%B3%20%D8%B3%D8%B1%D9%87%201.mp3')"  (click)="streamaudio('https://vps.alsader.net/%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA/%D8%A7%D8%B3%D8%AA%D9%85%D8%B9/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B4%D9%8A%D8%AE%20%D8%B3%D8%AA%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A8%D9%87%D8%A7%D8%AF%D9%84%D9%8A%20%D8%A8%D8%A7%D9%84%D8%B3%D9%8A%D8%AF%20%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%AF%20%D9%82%D8%AF%D8%B3%20%D8%B3%D8%B1%D9%87%201.mp3')"  class="home-box" >
+       <div class="home-box-img">
+         <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+         </div>
+         <div  class="home-box-title">اللقاء الصوتي الأول للسيد الشهيد محمد الصدر</div>
+      </div>
+      <div (click)="getlink('https://vps.alsader.net/%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA/%D8%A7%D8%B3%D8%AA%D9%85%D8%B9/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B4%D9%8A%D8%AE%20%D8%B3%D8%AA%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A8%D9%87%D8%A7%D8%AF%D9%84%D9%8A%20%D8%A8%D8%A7%D9%84%D8%B3%D9%8A%D8%AF%20%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%AF%20%D9%82%D8%AF%D8%B3%20%D8%B3%D8%B1%D9%87%202.mp3')"  (click)="streamaudio('https://vps.alsader.net/%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA/%D8%A7%D8%B3%D8%AA%D9%85%D8%B9/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B4%D9%8A%D8%AE%20%D8%B3%D8%AA%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A8%D9%87%D8%A7%D8%AF%D9%84%D9%8A%20%D8%A8%D8%A7%D9%84%D8%B3%D9%8A%D8%AF%20%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%AF%20%D9%82%D8%AF%D8%B3%20%D8%B3%D8%B1%D9%87%202.mp3')"  class="home-box" >
+        <div class="home-box-img">
+          <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+          </div>
+          <div  class="home-box-title">اللقاء الصوتي الثاني للسيد الشهيد محمد الصدر</div>
+       </div>
+       <div (click)="getlink('https://vps.alsader.net/%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA/%D8%A7%D8%B3%D8%AA%D9%85%D8%B9/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B4%D9%8A%D8%AE%20%D8%B3%D8%AA%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A8%D9%87%D8%A7%D8%AF%D9%84%D9%8A%20%D8%A8%D8%A7%D9%84%D8%B3%D9%8A%D8%AF%20%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%AF%20%D9%82%D8%AF%D8%B3%20%D8%B3%D8%B1%D9%87%203.mp3')"  (click)="streamaudio('https://vps.alsader.net/%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA/%D8%A7%D8%B3%D8%AA%D9%85%D8%B9/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B4%D9%8A%D8%AE%20%D8%B3%D8%AA%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A8%D9%87%D8%A7%D8%AF%D9%84%D9%8A%20%D8%A8%D8%A7%D9%84%D8%B3%D9%8A%D8%AF%20%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%AF%20%D9%82%D8%AF%D8%B3%20%D8%B3%D8%B1%D9%87%203.mp3')"  class="home-box" >
+         <div class="home-box-img">
+           <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+           </div>
+           <div  class="home-box-title">اللقاء الصوتي الثالث للسيد الشهيد محمد الصدر</div>
+        </div>
+        <div (click)="getlink('https://vps.alsader.net/%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA/%D8%A7%D8%B3%D8%AA%D9%85%D8%B9/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B4%D9%8A%D8%AE%20%D8%B3%D8%AA%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A8%D9%87%D8%A7%D8%AF%D9%84%D9%8A%20%D8%A8%D8%A7%D9%84%D8%B3%D9%8A%D8%AF%20%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%AF%20%D9%82%D8%AF%D8%B3%20%D8%B3%D8%B1%D9%87%204.mp3')"  (click)="streamaudio('https://vps.alsader.net/%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA/%D8%A7%D8%B3%D8%AA%D9%85%D8%B9/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B4%D9%8A%D8%AE%20%D8%B3%D8%AA%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A8%D9%87%D8%A7%D8%AF%D9%84%D9%8A%20%D8%A8%D8%A7%D9%84%D8%B3%D9%8A%D8%AF%20%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%AF%20%D9%82%D8%AF%D8%B3%20%D8%B3%D8%B1%D9%87%204.mp3')"  class="home-box" >
+          <div class="home-box-img">
+            <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+            </div>
+            <div  class="home-box-title">اللقاء الصوتي الرابع للسيد الشهيد محمد الصدر</div>
+         </div>
+         <div (click)="getlink('https://vps.alsader.net/%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA/%D8%A7%D8%B3%D8%AA%D9%85%D8%B9/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B4%D9%8A%D8%AE%20%D8%B3%D8%AA%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A8%D9%87%D8%A7%D8%AF%D9%84%D9%8A%20%D8%A8%D8%A7%D9%84%D8%B3%D9%8A%D8%AF%20%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%AF%20%D9%82%D8%AF%D8%B3%20%D8%B3%D8%B1%D9%87%205.mp3')"  (click)="streamaudio('https://vps.alsader.net/%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA/%D8%A7%D8%B3%D8%AA%D9%85%D8%B9/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B4%D9%8A%D8%AE%20%D8%B3%D8%AA%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A8%D9%87%D8%A7%D8%AF%D9%84%D9%8A%20%D8%A8%D8%A7%D9%84%D8%B3%D9%8A%D8%AF%20%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%AF%20%D9%82%D8%AF%D8%B3%20%D8%B3%D8%B1%D9%87%205.mp3')"  class="home-box" >
+           <div class="home-box-img">
+             <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+             </div>
+             <div  class="home-box-title">اللقاء الصوتي الخامس للسيد الشهيد محمد الصدر</div>
+          </div>
+          <div (click)="getlink('https://vps.alsader.net/%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA/%D8%A7%D8%B3%D8%AA%D9%85%D8%B9/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B4%D9%8A%D8%AE%20%D8%B3%D8%AA%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A8%D9%87%D8%A7%D8%AF%D9%84%D9%8A%20%D8%A8%D8%A7%D9%84%D8%B3%D9%8A%D8%AF%20%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%AF%20%D9%82%D8%AF%D8%B3%20%D8%B3%D8%B1%D9%87%206.mp3')"  (click)="streamaudio('https://vps.alsader.net/%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA/%D8%A7%D8%B3%D8%AA%D9%85%D8%B9/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B4%D9%8A%D8%AE%20%D8%B3%D8%AA%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A8%D9%87%D8%A7%D8%AF%D9%84%D9%8A%20%D8%A8%D8%A7%D9%84%D8%B3%D9%8A%D8%AF%20%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%AF%20%D9%82%D8%AF%D8%B3%20%D8%B3%D8%B1%D9%87%206.mp3')"  class="home-box" >
+            <div class="home-box-img">
+              <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+              </div>
+              <div  class="home-box-title">اللقاء الصوتي السادس للسيد الشهيد محمد الصدر</div>
+           </div>
+           <div (click)="getlink('https://vps.alsader.net/%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA/%D8%A7%D8%B3%D8%AA%D9%85%D8%B9/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B4%D9%8A%D8%AE%20%D8%B3%D8%AA%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A8%D9%87%D8%A7%D8%AF%D9%84%D9%8A%20%D8%A8%D8%A7%D9%84%D8%B3%D9%8A%D8%AF%20%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%AF%20%D9%82%D8%AF%D8%B3%20%D8%B3%D8%B1%D9%877.mp3')"  (click)="streamaudio('https://vps.alsader.net/%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA/%D8%A7%D8%B3%D8%AA%D9%85%D8%B9/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%B4%D9%8A%D8%AE%20%D8%B3%D8%AA%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A8%D9%87%D8%A7%D8%AF%D9%84%D9%8A%20%D8%A8%D8%A7%D9%84%D8%B3%D9%8A%D8%AF%20%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%AF%20%D9%82%D8%AF%D8%B3%20%D8%B3%D8%B1%D9%877.mp3')"  class="home-box" >
+             <div class="home-box-img">
+               <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+               </div>
+               <div  class="home-box-title">اللقاء الصوتي السابع للسيد الشهيد محمد الصدر</div>
+            </div>
+             <div (click)="getlink('https://vps.alsader.net/%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA/%D8%A7%D8%B3%D8%AA%D9%85%D8%B9/%D9%84%D9%82%D8%A7%D8%A1%20%D9%85%D8%AC%D9%84%D8%A9%20%D8%A7%D9%84%D9%87%D8%AF%D9%89%20%D8%A8%D8%A7%D9%84%D8%B3%D9%8A%D8%AF%20%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%AF%20%D9%82%D8%AF%D8%B3%20%D8%B3%D8%B1%D9%87.mp3')"  (click)="streamaudio('https://vps.alsader.net/%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA/%D8%A7%D8%B3%D8%AA%D9%85%D8%B9/%D9%84%D9%82%D8%A7%D8%A1%20%D9%85%D8%AC%D9%84%D8%A9%20%D8%A7%D9%84%D9%87%D8%AF%D9%89%20%D8%A8%D8%A7%D9%84%D8%B3%D9%8A%D8%AF%20%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%AF%20%D9%82%D8%AF%D8%B3%20%D8%B3%D8%B1%D9%87.mp3')"  class="home-box" >
+               <div class="home-box-img">
+                 <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+                 </div>
+                 <div  class="home-box-title">لقاء مجلة الهدى بالسيد الشهيد (قدس سره)</div>
+              </div>
+
+</ion-content>

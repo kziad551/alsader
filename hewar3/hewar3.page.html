@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-toolbar>
+      <div class="header-right">
+        <img src="\assets/headerimgs/masaelhead.png" height="70" >
+        <hr>
+      </div>
+      
+      <div class="header-middle">
+        <img src="\assets/headerimgs/Logo.png"></div>
+      <div class="header-left">
+          <ion-menu-button autoHide="true" >  <img src="\assets/headerimgs/menu-bulets.png"   height="25"> </ion-menu-button> 
+         <label class="page-title">الحوار الثالث</label>
+      </div>
+      </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+      <div *ngFor="let m of mawaez"  class="text-content">
+    <h2>{{m.title}}</h2>
+    <p>{{m.text}}</p>
+  </div>
+  </ion-content>
+  

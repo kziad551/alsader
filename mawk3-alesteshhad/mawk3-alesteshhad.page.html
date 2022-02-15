@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="header-right">
+      <img src="\assets/headerimgs/mawaez-top.png" width="69" height="50" x="100">
+      <hr>
+    </div>
+    
+    <div class="header-middle">
+      <img src="\assets/headerimgs/Logo.png"></div>
+
+    <div class="header-left">
+        <ion-menu-button autoHide="true" >  <img src="\assets/headerimgs/menu-bulets.png"   height="25"> </ion-menu-button> 
+       <label class="page-title">{{ 'home13' | translate }}</label>
+    </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>  
+  <div (click)="moveToPage('mawk3-alesteshhad-mp4')"  class="home-box" >
+    <div class="home-box-img">
+      <img class="icon"  src="\assets/headerimgs/mareyat-top.png" width="50" height="45">
+      </div>
+      <div  class="home-box-title">{{ 'See' | translate }} </div>
+  </div> 
+  <div  (click)="moveToPage('mawk3-alesteshhad-suwar')" class="home-box" >
+    <div class="home-box-img">
+      <img class="icon"  src="\assets/headerimgs/alsuwar-box.png" width="50" height="45">
+      </div>
+      <div  class="home-box-title">{{ 'Pictures' | translate }}  </div>
+  </div> 
+  <div (click)="moveToPage('mawk3-alesteshhad-eqra2')" class="home-box" >
+    <div class="home-box-img">
+      <img class="icon"  src="\assets/headerimgs/masaelicon.png" width="50" height="45">
+      </div>
+      <div  class="home-box-title">{{ 'hadesaestshhad' | translate }}  </div>
+  </div> 
+</ion-content>

@@ -1,0 +1,87 @@
+<ion-app>
+    <ion-menu contentId="content1" side="start">
+        <ion-header>
+            <ion-toolbar>
+                <ion-title>{{ 'menu' | translate }}</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content>
+
+            <div class="lang-box" >
+                    <ion-select class="custom-options" interface="popover" (ionChange)="onChange($event)">
+                        <ion-select-option selected value="ar">عربي</ion-select-option>
+                        <ion-select-option value="farsi">فارسي</ion-select-option>
+                        <ion-select-option value="en">English</ion-select-option>
+                    </ion-select>
+                <img (click)="moveToPage('search-list')" src="\assets/headerimgs/search.png"/>
+            </div>
+            <ion-item lines="none">
+                <h5>{{ 'changecolor' | translate }}</h5>
+                <ion-toggle  (ionChange)="onClick($event)" ></ion-toggle>
+            </ion-item>
+            <div menuClose class="app-menu">
+                <div  (click)="moveToPage('home')"  class="home-box menu" >
+                    <div class="home-box-title" >  {{ 'mainhome' | translate }}</div>
+                </div>
+                <div   (click)="moveToPage('sera-al-zateya')"  class="home-box menu" >
+                    <div  class="home-box-title" > {{ 'home1' | translate }}</div>
+                </div>
+                <div   (click)="moveToPage('mualafat-note')"  class="home-box menu" >
+                    <div  class="home-box-title"> {{ 'home2' | translate }}</div>
+                </div>
+                <div   (click)="moveToPage('khotabalsayed')"  class="home-box menu" >
+                    <div  class="home-box-title">{{ 'home3' | translate }}</div>
+                </div>
+                <div   (click)="moveToPage('lekaat-hewarat')"  class="home-box menu" >
+                    <div  class="home-box-title">{{ 'home4' | translate }}</div>
+                </div>
+                <div   (click)="moveToPage('mawaez-akhlakeya')"  class="home-box menu" >
+                    <div  class="home-box-title">  {{ 'home5' | translate }}</div>
+                </div>
+                <div  (click)="moveToPage('aldurus')"  class="home-box menu" >
+                    <div  class="home-box-title">{{ 'home6' | translate }}</div>
+                </div>
+                <div  (click)="moveToPage('wasaekyat')"  class="home-box menu" >
+                    <div  class="home-box-title">   {{ 'home7' | translate }}</div>
+                </div>
+                <div  (click)="moveToPage('suwar')"  class="home-box menu" >
+                    <div  class="home-box-title">  {{ 'home8' | translate }}</div>
+                </div>
+                <div   (click)="moveToPage('masaelshareya')"  class="home-box menu" >
+                    <div  class="home-box-title"> {{ 'home9' | translate }}</div>
+                </div>
+                <div   (click)="moveToPage('makat3-khasa-lelsayed')"  class="home-box menu" >
+                    <div  class="home-box-title"> {{ 'home10' | translate }}</div>
+                </div>
+                <div  (click)="moveToPage('maktabat-alsayed')"  class="home-box menu" >
+                    <div  class="home-box-title">   {{ 'home11' | translate }}</div>
+                </div>
+                <div   (click)="moveToPage('almathaf')"  class="home-box menu" >
+                    <div  class="home-box-title">  {{ 'home12' | translate }}</div>
+                </div>
+                <div   (click)="moveToPage('mawk3-alesteshhad')"  class="home-box menu" >
+                    <div  class="home-box-title">  {{ 'home13' | translate }}</div>
+                </div>
+                <div   (click)="moveToPage('alnajlayn-alshahedayn')"  class="home-box menu" >
+                    <div  class="home-box-title">  {{ 'home14' | translate }}</div>
+                </div>
+                <div   (click)="moveToPage('markad-alsayed')"  class="home-box menu" >
+                    <div  class="home-box-title">  {{ 'home15' | translate }}</div>
+                </div>
+                <div   (click)="moveToPage('mawaketalsalat')"  class="home-box menu" >
+                    <div  class="home-box-title">{{ 'home16' | translate }}</div>
+                </div>
+                <div   (click)="clearCache()" class="clear-cache"  class="home-box menu clear-cache" >
+                    <div  class="home-box-title">{{ 'deletememory' | translate }}</div>
+                </div>
+                <div   (click)="exitApp()"  class="home-box menu exit-app" >
+                    <div  class="home-box-title"> {{ 'exit' | translate }} </div>
+                </div>
+            </div>
+        </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="content1" main></ion-router-outlet>
+   <div *ngIf="ios" class="back-to-previous" (click)="myBackButton()"><svg _ngcontent-fwt-c0="" viewBox="-8 -8 40 40" clip-rule="evenodd" fill-rule="evenodd" height="40" width="40" xmlns="http://www.w3.org/2000/svg"><path _ngcontent-fwt-c0="" d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z" style="
+    background-size: 20px 30px;
+"></path></svg></div>
+</ion-app>

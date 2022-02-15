@@ -1,0 +1,84 @@
+
+.home-box-title {
+    position: relative;
+    right: 0;
+    color: #fff;
+    top: 2px;
+    font-size: 25px;
+}
+.lang-box-title {
+    position: relative;
+    right: 0;
+    color: #fff;
+    top: 2px;
+    font-size: 25px;
+    color: #ff8400;
+}
+.home-box.menu.exit-app {
+    background-color: #e07e23 !important;
+    box-shadow: none;
+}
+.back-to-previous svg {
+    background-color: #0c89a4 !important;
+    border-radius: 50%;
+}
+.back-to-previous{
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-left: 27px;
+}
+ion-title{
+    text-align: center;
+    color: #ff8400;
+    font-size: 24px;
+}
+.home-box.menu.clear-cache {
+    background-color: #ecb920 !important;
+    box-shadow: none;
+}
+#content1{background-color: #ffffff;}
+ion-list {
+    text-align: center;
+    --background: #000 !important;
+    margin: 5px 26px 5px 27px !important;
+    box-shadow: 0px 0px 20px -3px rgba(255, 255, 255, 0.7);
+    border-radius: 7px;
+    top: 15px;
+    position: relative;
+}
+select#language {
+    color: #ffffff;
+    background-color: #000000;
+}
+.custom-options {
+    background: #fff;
+    color: #000;
+    width: auto;
+    position: absolute;
+    top: -9px;
+    left: 118px;
+    border-radius: 12%;
+}
+.lang-box img {
+    width: 30px !important;
+    position: relative;
+    right: 5rem;
+    top: 3px;
+}
+.app-menu {
+    margin-top: -1rem;
+}
+
+option {
+    color: #ffffff;
+}
+.lang-box {
+    top: 26px;
+    position: relative;
+    left: 2.8rem;
+    text-align: center;
+    border-radius: 7px;
+}

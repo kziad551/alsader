@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="header-right">
+      <img src="\assets/headerimgs/masaelhead.png" height="70" >
+      <hr>
+    </div>
+    
+    <div class="header-middle">
+      <img src="\assets/headerimgs/Logo.png"></div>
+    <div class="header-left">
+        <ion-menu-button autoHide="true" >  <img src="\assets/headerimgs/menu-bulets.png"   height="25"> </ion-menu-button> 
+       <label class="page-title"> الارشيف الكتابي</label>
+    </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content >  
+       
+    <div (click)="moveToPage('khotabmaktuba')" class="home-box" >
+      <div class="home-box-img">
+        <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+        </div>
+        <div  class="home-box-title">خطب السيد</div>
+    </div>
+    <div (click)="moveToPage('mawaezmaktuba')" class="home-box" >
+      <div class="home-box-img">
+        <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+        </div>
+        <div  class="home-box-title">مواعظ و لقاءات</div>
+    </div>
+  
+</ion-content>

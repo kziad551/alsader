@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="header-right">
+      <img src="\assets/headerimgs/voice-top.png" width="83" height="50" x="100">
+      <hr>
+    </div>
+
+    <div class="header-middle">
+      <img src="\assets/headerimgs/Logo.png"></div>
+
+    <div class="header-left">
+      <ion-menu-button autoHide="true" >  <img src="\assets/headerimgs/menu-bulets.png"   height="25"> </ion-menu-button>
+      <label class="page-title"> سورة النصر</label>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-fab  [hidden]="forwardshow" (click)="forwardLink()"  bottom right #fab>
+    <button ion-fab>
+      <ion-icon   name="ios-redo"></ion-icon>
+    </button>
+  </ion-fab>
+  <div    (click)="streamaudio(v.link)" class="home-box" *ngFor="let v of voice"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/player-icon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{v.title}} </div>
+  </div>
+</ion-content>

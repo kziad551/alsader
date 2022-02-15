@@ -1,0 +1,294 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="header-right">
+      <img src="\assets/headerimgs/masaelhead.png" height="70" >
+      <hr>
+    </div>
+
+    <div class="header-middle">
+      <img src="\assets/headerimgs/Logo.png"></div>
+    <div class="header-left">
+      <ion-menu-button autoHide="true" >  <img src="\assets/headerimgs/menu-bulets.png"   height="25"> </ion-menu-button>
+      <label class="page-title">{{ 'read' | translate }}</label>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-fab  [hidden]="forwardshow" (click)="forwardLink()"  bottom right #fab>
+    <button ion-fab>
+      <ion-icon   name="ios-redo"></ion-icon>
+    </button>
+  </ion-fab>
+  <div (click)="getlink('khotabjmaa1')" (click)="moveToPage('khotabjmaa1')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa1' | translate }}</div>
+  </div>
+  <div (click)="getlink('khotabjmaa2')" (click)="moveToPage('khotabjmaa2')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa2' | translate }}</div>
+  </div>
+  <div (click)="getlink('khotabjmaa3')" (click)="moveToPage('khotabjmaa3')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa3' | translate }}</div>
+  </div>
+  <div (click)="getlink('khotabjmaa4')" (click)="moveToPage('khotabjmaa4')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa4' | translate }}</div>
+  </div>
+  <div (click)="getlink('khotabjmaa5')" (click)="moveToPage('khotabjmaa5')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa5' | translate }}</div>
+  </div>
+  <div (click)="getlink('khotabjmaa6')" (click)="moveToPage('khotabjmaa6')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa6' | translate }}</div>
+  </div>
+  <div (click)="getlink('khotabjmaa7')" (click)="moveToPage('khotabjmaa7')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa7' | translate }}</div>
+  </div>
+  <div (click)="getlink('khotabjmaa8')" (click)="moveToPage('khotabjmaa8')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa8' | translate }}</div>
+  </div>
+  <div (click)="getlink('khotabjmaa9')" (click)="moveToPage('khotabjmaa9')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa9' | translate }}</div>
+  </div>
+  <div (click)="getlink('khotabjmaa10')" (click)="moveToPage('khotabjmaa10')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa10' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa11')" (click)="moveToPage('khotabjmaa11')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa11' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa12')" (click)="moveToPage('khotabjmaa12')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa12' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa13')" (click)="moveToPage('khotabjmaa13')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa13' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa14')" (click)="moveToPage('khotabjmaa14')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa14' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa15')" (click)="moveToPage('khotabjmaa15')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa15' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa16')" (click)="moveToPage('khotabjmaa16')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa16' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa17')" (click)="moveToPage('khotabjmaa17')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa17' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa18')" (click)="moveToPage('khotabjmaa18')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa18' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa19')" (click)="moveToPage('khotabjmaa19')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa19' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa20')" (click)="moveToPage('khotabjmaa20')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa20' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa21')" (click)="moveToPage('khotabjmaa21')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa21' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa22')" (click)="moveToPage('khotabjmaa22')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa22' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa23')" (click)="moveToPage('khotabjmaa23')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa23' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa24')" (click)="moveToPage('khotabjmaa24')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa24' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa25')" (click)="moveToPage('khotabjmaa25')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa25' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa26')" (click)="moveToPage('khotabjmaa26')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa26' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa27')" (click)="moveToPage('khotabjmaa27')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa27' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa28')" (click)="moveToPage('khotabjmaa28')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa28' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa29')" (click)="moveToPage('khotabjmaa29')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa29' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa30')" (click)="moveToPage('khotabjmaa30')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa30' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa31')" (click)="moveToPage('khotabjmaa31')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa31' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa32')" (click)="moveToPage('khotabjmaa32')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa32' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa33')" (click)="moveToPage('khotabjmaa33')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa33' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa34')" (click)="moveToPage('khotabjmaa34')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa34' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa35')" (click)="moveToPage('khotabjmaa35')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa35' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa36')" (click)="moveToPage('khotabjmaa36')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa36' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa37')" (click)="moveToPage('khotabjmaa37')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa37' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa38')" (click)="moveToPage('khotabjmaa38')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa38' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa39')" (click)="moveToPage('khotabjmaa39')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa39' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa40')" (click)="moveToPage('khotabjmaa40')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa40' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa41')" (click)="moveToPage('khotabjmaa41')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa41' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa42')" (click)="moveToPage('khotabjmaa42')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa42' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa43')" (click)="moveToPage('khotabjmaa43')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa43' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa44')" (click)="moveToPage('khotabjmaa44')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa44' | translate }} </div>
+  </div>
+  <div (click)="getlink('khotabjmaa45')" (click)="moveToPage('khotabjmaa45')" class="home-box"  >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+    </div>
+    <div  class="home-box-title">{{ 'jmaa45' | translate }} </div>
+  </div>
+</ion-content>

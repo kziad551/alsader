@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="header-right">
+      <img src="\assets/headerimgs/mawaez-top.png" width="69" height="50" x="100">
+      <hr>
+    </div>
+
+    <div class="header-middle">
+      <img src="\assets/headerimgs/Logo.png"></div>
+
+    <div class="header-left">
+        <ion-menu-button autoHide="true" >  <img src="\assets/headerimgs/menu-bulets.png"   height="25"> </ion-menu-button>
+       <label class="page-title"> {{ 'home10' | translate }}</label>
+    </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div (click)="moveToPage('salat-jamaa')"   class="home-box" >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/wasaekyatvideo-icon.png" width="50" height="45">
+      </div>
+      <div  class="home-box-title"> {{ 'markadalamer' | translate }}</div>
+   </div>
+   <div (click)="moveToPage('shaara2')"   class="home-box" >
+     <div class="home-box-img">
+       <img  src="\assets/headerimgs/wasaekyatvideo-icon.png" width="50" height="45">
+       </div>
+       <div  class="home-box-title">{{ 'shuara2' | translate }} </div>
+    </div>
+  <div (click)="streamvideo('https://vps.alsader.net/%D9%85%D9%82%D8%A7%D8%B7%D8%B9%20%D8%AE%D8%A7%D8%B5%D8%A9/(new)%D9%85%D8%B9%D8%B1%D8%B6%20%D8%A7%D9%84%D9%86%D8%B5%D8%A8.mp4')" class="home-box" >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/wasaekyatvideo-icon.png" width="50" height="45">
+      </div>
+      <div  class="home-box-title"> {{ 'maaradnaseb' | translate }}</div>
+  </div>
+</ion-content>

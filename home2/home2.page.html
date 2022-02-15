@@ -1,0 +1,92 @@
+<ion-content  >
+  <ion-slides (swipe)="swipeEvent($event)" [options]="sliderOpts" #slider>
+    <ion-slide>
+      <div class="slide-box">
+       <img   src="\assets/headerimgs/app-s1.jpg">
+      </div>
+  </ion-slide>
+   <ion-slide>
+  <div  class="slide-box"  >
+    <img src="\assets/headerimgs/app-s2.jpg" >
+  </div>
+  </ion-slide>
+  <ion-slide>
+    <div class="slide-box">
+    <img   src="\assets/headerimgs/app-s3.jpg" >
+   </div>
+  </ion-slide>
+  <ion-slide>
+  <div  class="slide-box">
+    <img  src="\assets/headerimgs/app-s4.jpg" >
+  </div>
+ </ion-slide>
+</ion-slides>
+
+  <div class="bottom-content" (swipe)="swipeEvent($event)" *ngIf="showImage" >
+      <img class="gif-arrow" src="https://media1.giphy.com/media/IgMCDTyZuOeDlIyd4H/giphy.gif">
+  </div>
+
+<ion-header id="section2" (swipe)="swipeEvent($event)" >
+<ion-toolbar>
+    <div class="header-right">
+      <img src="\assets/headerimgs/sayed-top-header.png" height="100">
+    <hr>
+   </div>
+  <div class="header-middle">
+    <img src="\assets/headerimgs/Logo.png">
+  </div>
+  <div class="header-left">
+  <label class="page-title"> الرئيسية</label>
+  </div>
+  </ion-toolbar>
+</ion-header>
+
+     <div  (swipe)="swipeEvent2($event)" (click)="moveToPage('mualafat')"  class="home-box" >
+       <div  class="home-box-title">   المؤلفــــــــــــــــــات</div>
+     <div class="home-box-img">
+      <img src="\assets/headerimgs/mualafat-box.png" height="55">
+     </div>
+  </div>
+   <div  (swipe)="swipeEvent2($event)" (click)="moveToPage('mareyat')"  class="home-box" >
+       <div  class="home-box-title">    المرئيـــــــــــــــــــــات</div>
+     <div class="home-box-img">
+      <img src="\assets/headerimgs/mareyat-box.png" height="55">
+     </div>
+  </div>
+  <div  (swipe)="swipeEvent2($event)" (click)="moveToPage('')"  class="home-box" >
+       <div  class="home-box-title">   المرقــــــــــــــــــــــــــد</div>
+     <div class="home-box-img">
+      <img src="\assets/headerimgs/almarkad-box.png" height="55">
+     </div>
+  </div>
+  <div  (swipe)="swipeEvent2($event)" (click)="moveToPage('arshefketabe')"  class="home-box" >
+       <div  class="home-box-title"> الارشيف الكتابي</div>
+     <div class="home-box-img">
+      <img src="\assets/headerimgs/arshifketabe-box.png" height="55">
+     </div>
+  </div>
+  <div  (swipe)="swipeEvent2($event)" (click)="moveToPage('masaelshareya')"  class="home-box" >
+       <div  class="home-box-title"> المسائل الشرعية</div>
+     <div class="home-box-img">
+      <img src="\assets/headerimgs/msaelshreya-box.png" height="55">
+     </div>
+  </div>
+   <div  (swipe)="swipeEvent2($event)" (click)="moveToPage('sawteyat')"  class="home-box" >
+       <div  class="home-box-title">   الصوتيـــــــــــــــات</div>
+     <div class="home-box-img">
+      <img src="\assets/headerimgs/alsawteyat-box.png" height="55">
+     </div>
+  </div>
+  <div (swipe)="swipeEvent2($event)"  (click)="moveToPage('mawaketalsalat')"  class="home-box" >
+       <div  class="home-box-title"> مواقيت الصـلاة</div>
+     <div class="home-box-img">
+      <img src="\assets/headerimgs/mawaketsalat-box.png" height="55">
+     </div>
+  </div>
+  <div  (swipe)="swipeEvent2($event)" (click)="moveToPage('suwar')"  class="home-box" >
+       <div  class="home-box-title">  الصـــــــــــــــــــــــور</div>
+     <div class="home-box-img">
+      <img src="\assets/headerimgs/alsuwar-box.png" height="55">
+     </div>
+  </div>
+</ion-content>

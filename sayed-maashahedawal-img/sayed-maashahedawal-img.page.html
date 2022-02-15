@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="header-right">
+      <img src="\assets/headerimgs/alsuwar-box.png" height="50" >
+      <hr>
+    </div>
+    
+    <div class="header-middle">
+      <img src="\assets/headerimgs/Logo.png"></div>
+    <div class="header-left">
+        <ion-menu-button autoHide="true" >  <img src="\assets/headerimgs/menu-bulets.png"   height="25"> </ion-menu-button> 
+       <label class="page-title"> {{ 'shahedawal' | translate }}</label>
+    </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="images">
+    <div class="one-image" *ngFor="let i of image" >
+    <img  (click)="showPhoto(i.link)" src="{{i.link}}">
+  </div>
+   <div class="one-image" >
+    <img  src="https://alsader.net/wp-content/uploads/2021/05/558-5585959_black-and-white-png-download-snow-transparent-png-1.png">
+   </div>
+   </div>
+</ion-content>

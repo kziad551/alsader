@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="header-right">
+      <img src="\assets/headerimgs/khotab-sayed-top.png" height="70" >
+      <hr>
+    </div>
+
+    <div class="header-middle">
+      <img src="\assets/headerimgs/Logo.png"></div>
+    <div class="header-left">
+        <ion-menu-button autoHide="true" >  <img src="\assets/headerimgs/menu-bulets.png"   height="25"> </ion-menu-button>
+       <label class="page-title">{{ 'home3' | translate }}</label>
+    </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab  [hidden]="forwardshow" (click)="forward()"  bottom right #fab>
+    <button ion-fab>
+      <ion-icon   name="ios-redo"></ion-icon>
+    </button>
+  </ion-fab>
+  <ion-searchbar debounce={1000} animated  placeholder="{{ 'search' | translate }}" (ionInput)="getTopics($event)"></ion-searchbar>
+
+<h2  class="search-result-title" [hidden]="searchClicked">{{ 'searchresult' | translate }}</h2>
+
+<div  [hidden]="searchClicked" *ngFor="let v of voice">
+  <div  *ngIf="v.category !='mp3' && v.category !='mp4'"  id="search-books"  (click)="moveToPage(v.link)"  class="home-box" >
+<div class="home-box-img">
+  <img  src="\assets/headerimgs/masaelicon.png" width="50" height="55">
+  </div>
+    <div  class="home-box-title">{{ v.title }}</div>
+</div>
+</div>
+<div  [hidden]="searchClicked" *ngFor="let v of voice">
+  <div  *ngIf="v.category !='mp4' && v.category !='page' "  id="search-books" (click)="streamaudio(v.link)"   class="home-box" >
+<div class="home-box-img">
+  <img  src="\assets/headerimgs/voice-icon.png" width="50" height="55">
+  </div>
+    <div  class="home-box-title">{{ v.title }}</div>
+</div>
+</div>
+<div   [hidden]="searchClicked" *ngFor="let v of voice">
+  <div  *ngIf="v.category !='page' && v.category !='mp3'"  id="search-books" (click)="streamvideo(v.link)"   class="home-box" >
+<div class="home-box-img">
+  <img  src="\assets/headerimgs/wasaekyatvideo-icon.png" width="50" height="55">
+  </div>
+    <div  class="home-box-title">{{ v.title }}</div>
+</div>
+</div>
+
+  <div [hidden]="searchNotClicked" class="home-box" (click)="moveToPage('khotab-jmaa-video')" >
+    <div class="home-box-img">
+      <img class="icon"  src="\assets/headerimgs/mareyat-top.png" width="50" height="45">
+      </div>
+      <div  class="home-box-title">{{ 'See' | translate }} </div>
+  </div>
+  <div [hidden]="searchNotClicked" (click)="moveToPage('khotabalsayed-mp3')" class="home-box" >
+    <div class="home-box-img">
+      <img class="icon" src="\assets/headerimgs/sawteyat-icon.png" width="50" height="45">
+      </div>
+      <div  class="home-box-title">{{ 'listen' | translate }} </div>
+  </div>
+  <div [hidden]="searchNotClicked" (click)="moveToPage('khotabmaktuba')"  class="home-box" >
+    <div class="home-box-img">
+      <img class="icon"  src="\assets/headerimgs/masaelicon.png" width="50" height="45">
+      </div>
+      <div  class="home-box-title">{{ 'read' | translate }} </div>
+  </div>
+  <div  [hidden]="searchNotClicked" (click)="moveToPage('adeyat-aljmaa')" class="home-box" >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/pray.png" width="50" height="55">
+      </div>
+      <div  class="home-box-title">{{ 'jmaapray' | translate }}</div>
+   </div>
+  <div  [hidden]="searchNotClicked" (click)="moveToPage('ayat-quraan')"  class="home-box" >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/pray-2.png" width="70" height="70">
+    </div>
+    <div class="home-box-title">{{ 'khotabt1' | translate }}</div>
+  </div>
+  <div  [hidden]="searchNotClicked" (click)="moveToPage('al-latmeyat')" class="home-box" >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/pray-2.png" width="70" height="70">
+    </div>
+    <div  class="home-box-title">{{ 'khotabt2' | translate }}</div>
+  </div>
+  <div  [hidden]="searchNotClicked"  (click)="moveToPage('al-hetafat')" class="home-box" >
+    <div class="home-box-img">
+      <img  src="\assets/headerimgs/pray-2.png" width="70" height="70">
+    </div>
+    <div  class="home-box-title">{{ 'khotabt3' | translate }}</div>
+  </div>
+</ion-content>
