@@ -8,6 +8,7 @@ import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/na
 import { Storage } from '@ionic/storage';
 import { TranslateService } from '@ngx-translate/core';
 import { VideoPlayer } from '@ionic-native/video-player/ngx';
+import { HttpClient } from "@angular/common/http";
 
 
 @Component({
@@ -17,23 +18,27 @@ import { VideoPlayer } from '@ionic-native/video-player/ngx';
 })
 export class KhotabJmaaVideoPage implements OnInit {
   forwardshow: boolean = true;
-  public title;
-  public link;
-  public video   = [];
+  private data:any = [];
+  public title:any[] = [];
+  public content:any[] = [];
  ngOnInit() { 
 
-  }
-constructor(private videoPlayer: VideoPlayer,private translate: TranslateService,private storage: Storage,private nativePageTransitions: NativePageTransitions ,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
-    this.title = getXMLDataVideo("title");
-    this.link = getXMLDataVideo("link");
+  const url= 'https://strapi.alsader.net/api/khotab-al-jomaas?filters[khotab_al_jomaa_category][title][$eq]=khotob-jmaa-mp4&populate=*'
+    this.http.get(url).subscribe((res)=>{
+      this.data = res
+      var i =0;
+      for ( i=0; i< this.data.data.length; i++ ) {
+       var array =[];
+       array["title"] = this.data.data[i].attributes.title;
+       array["link"] = this.data.data[i].attributes.link;
+       this.content.push(array);      
+      }
+    })
 
-     var i =0;
-     for ( i=0; i< this.title.length; i++ ) {
-     var onevideo =[];
-     onevideo["title"] = this.title[i];
-     onevideo["link"] = this.link[i];
-     this.video.push(onevideo);
-    }
+  }
+constructor(private http: HttpClient,private videoPlayer: VideoPlayer,private translate: TranslateService,private storage: Storage,private nativePageTransitions: NativePageTransitions ,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
+    
+
  }
     ionViewWillEnter(){
         this.storage.get('page-khotab-alsayed').then(value => {
@@ -89,29 +94,3 @@ constructor(private videoPlayer: VideoPlayer,private translate: TranslateService
   }
 }
 
-function getXMLDataVideo( itemname:string ) {
-  var request = new XMLHttpRequest();
-  try {
-            request.open('GET', 'assets/videos-xml/khotbaljmaavideos.xml', false);
-            request.send(null);
-        } catch (err) {
-            return '';
-    }
-
-  if (request.status === 200 || request.status === 0) { 
-    var parser = new DOMParser();
-    var doc = parser.parseFromString(request.responseText, "application/xml");
-    var videos = doc.getElementsByTagName("video");
-    var result = [];
-    for (var i = 0; i < videos.length; i++) {
-      var video = videos[i];  
-      
-      result.push(video.getElementsByTagName(itemname)[0].childNodes[0].nodeValue)
-    }
-  
-    return result;
-  }
-  
-  return '';
-
-}

@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { PopoverController } from '@ionic/angular';
 import { LoadingController } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
+import { HttpClient } from "@angular/common/http";
 
 @Component({
   selector: 'app-al-hetafat-mp3',
@@ -12,14 +13,25 @@ import { Storage } from '@ionic/storage';
   styleUrls: ['./al-hetafat-mp3.page.scss'],
 })
 export class AlHetafatMp3Page implements OnInit {
-  public title;
-  public link;
-  public voice = [];
+  private data:any = [];
+  public title:any[] = [];
+  public content:any[] = [];
   forwardshow: boolean = true;
   ngOnInit() {
+    const url= 'https://strapi.alsader.net/api/khotab-al-jomaas?filters[khotab_al_jomaa_category][title][$eq]=khotabjmaa-hitafat-mp3&populate=*'
+    this.http.get(url).subscribe((res)=>{
+      this.data = res
+      var i =0;
+      for ( i=0; i< this.data.data.length; i++ ) {
+       var array =[];
+       array["title"] = this.data.data[i].attributes.title;
+       array["link"] = this.data.data[i].attributes.link;
+       this.content.push(array);      
+      }
+    })
 
   }
-  constructor(private storage: Storage,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
+  constructor(private http: HttpClient,private storage: Storage,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
   }
 
   streamaudio(url: string){
