@@ -4,6 +4,7 @@ import {NativePageTransitions, NativeTransitionOptions} from "@ionic-native/nati
 import {LoadingController, NavController, PopoverController} from "@ionic/angular";
 import {StreamingMedia, StreamingVideoOptions} from "@ionic-native/streaming-media/ngx";
 import {Router} from "@angular/router";
+import { HttpClient } from "@angular/common/http"; 
 
 @Component({
   selector: 'app-zekra-shahadet-waledh',
@@ -11,9 +12,24 @@ import {Router} from "@angular/router";
   styleUrls: ['./zekra-shahadet-waledh.page.scss'],
 })
 export class ZekraShahadetWaledhPage implements OnInit {
+  private data:any = [];
+  public title:any[] = [];
+  public content:any[] = [];
+
   ngOnInit() {
+    const url= 'https://strapi.alsader.net/api/almarkads?filters[almarkad_cat][title][$eq]=khotab-sayed-moktada-mp4&populate=*'
+    this.http.get(url).subscribe((res)=>{
+      this.data = res
+      var i =0;
+      for ( i=0; i< this.data.data.length; i++ ) {
+       var array =[];
+       array["title"] = this.data.data[i].attributes.title;
+       array["link"] = this.data.data[i].attributes.link;
+       this.content.push(array);      
+      }
+    })
   }
-  constructor(private storage: Storage,private nativePageTransitions: NativePageTransitions ,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
+  constructor(private http: HttpClient,private storage: Storage,private nativePageTransitions: NativePageTransitions ,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
   }
   streamvideo(url: string){
     var options: StreamingVideoOptions = {

@@ -4,6 +4,7 @@ import { StreamingMedia, StreamingVideoOptions } from '@ionic-native/streaming-m
 import { Router } from '@angular/router';
 import { PopoverController } from '@ionic/angular';
 import { LoadingController } from '@ionic/angular';
+import { HttpClient } from "@angular/common/http"; 
 
 @Component({
     selector: 'app-mawaez',
@@ -11,26 +12,29 @@ import { LoadingController } from '@ionic/angular';
     styleUrls: ['./mawaez.page.scss'],
 })
 export class MawaezPage implements OnInit {
-    public title;
-    public link;
-    public voice = [];
+    private data:any = [];
+    public title:any[] = [];
+    public content:any[] = [];
 
     ngOnInit() {
-
+        const url= 'https://strapi.alsader.net/api/mawaez-akhlakyas?filters[mawaez_akhlakya_cat][title][$eq]=mawa3ez-akhlakya-mp3&populate=*'
+        this.http.get(url).subscribe((res)=>{
+          this.data = res
+          var i =0;
+          for ( i=0; i< this.data.data.length; i++ ) {
+           var array =[];
+           array["title"] = this.data.data[i].attributes.title;
+           array["link"] = this.data.data[i].attributes.link;
+           this.content.push(array);      
+          }
+        })
     }
 
-    constructor(public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
+    constructor(private http: HttpClient,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
 
-        this.title = getXMLDataVoice("title");
-        this.link = getXMLDataVoice("link");
+        
 
-        var i =0;
-        for ( i=0; i< this.title.length; i++ ) {
-            var onevoice =[];
-            onevoice["title"] = this.title[i];
-            onevoice["link"] = this.link[i];
-            this.voice.push(onevoice);
-        }
+      
     }
 
     streamaudio(url: string){
@@ -52,30 +56,3 @@ export class MawaezPage implements OnInit {
 
 }
 
-function getXMLDataVoice( itemname:string ) {
-    var request = new XMLHttpRequest();
-
-    try {
-        request.open('GET', 'assets/almawaez.xml', false);
-        request.send(null);
-    } catch (err) {
-        return '';
-    }
-
-    if (request.status === 200 || request.status === 0) {
-        var parser = new DOMParser();
-        var doc = parser.parseFromString(request.responseText, "application/xml");
-        var voices = doc.getElementsByTagName("voice");
-        var result = [];
-        for (var i = 0; i < voices.length; i++) {
-            var voice = voices[i];
-
-            result.push(voice.getElementsByTagName(itemname)[0].childNodes[0].nodeValue)
-        }
-
-        return result;
-    }
-
-    return '';
-
-}
