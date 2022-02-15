@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="header-right">
+      <img src="\assets/headerimgs/khotab-sayed-top.png" height="70" >
+      <hr>
+    </div>
+    
+    <div class="header-middle">
+      <img src="\assets/headerimgs/Logo.png"></div>
+    <div class="header-left">
+        <ion-menu-button autoHide="true" >  <img src="\assets/headerimgs/menu-bulets.png"   height="25"> </ion-menu-button> 
+       <label class="page-title">{{ 'jmaapray' | translate }}</label>
+    </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab  [hidden]="forwardshow" (click)="forward()"  bottom right #fab>
+    <button ion-fab>
+      <ion-icon   name="ios-redo"></ion-icon>
+    </button>
+  </ion-fab>
+  <div (click)="moveToPage('khotabalsayed-ad3eya-mp3')" class="home-box" >
+    <div class="home-box-img">
+      <img class="icon" src="\assets/headerimgs/sawteyat-icon.png" width="50" height="45">
+      </div>
+      <div  class="home-box-title">{{ 'listen' | translate }} </div>
+  </div> 
+  <div (click)="moveToPage('khotabalsayed-ad3eya-ekraa')" class="home-box" >
+    <div class="home-box-img">
+      <img class="icon"  src="\assets/headerimgs/masaelicon.png" width="50" height="45">
+      </div>
+      <div  class="home-box-title">{{ 'read' | translate }} </div>
+  </div> 
+  <div  class="home-box" (click)="moveToPage('khotabalsayed-ad3eya-mp4')" >
+    <div class="home-box-img">
+      <img class="icon"  src="\assets/headerimgs/mareyat-top.png" width="50" height="45">
+      </div>
+      <div  class="home-box-title">{{ 'See' | translate }} </div>
+  </div> 
+</ion-content>
