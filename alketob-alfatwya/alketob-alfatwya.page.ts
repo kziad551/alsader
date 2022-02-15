@@ -13,6 +13,7 @@ import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/na
 import { Storage } from '@ionic/storage';
 import { DocumentViewer } from '@ionic-native/document-viewer/ngx';
 import {DocumentViewerOptions} from "@ionic-native/document-viewer";
+import { HttpClient } from "@angular/common/http"; 
 @Component({
   selector: 'app-alketob-alfatwya',
   templateUrl: './alketob-alfatwya.page.html',
@@ -21,14 +22,14 @@ import {DocumentViewerOptions} from "@ionic-native/document-viewer";
 export class AlketobAlfatwyaPage implements OnInit {
   fileTransferpdf: FileTransferObject;
   loaderToShow: any;
-  public title;
-  public link;
-  public book = [];
+  private data:any = [];
+  public title:any[] = [];
+  public content:any[] = [];
   isLoading = false;
   forwardshow: boolean = true;
   public ac: PdfViewerService = new PdfViewerService(new FileOpener,new FileTransfer,new File,new DocumentViewer,this.platform);
 
-  constructor(private transfer: FileTransfer,private fileOpener: FileOpener, private file: File,private storage: Storage,private nativePageTransitions: NativePageTransitions,public platform: Platform,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
+  constructor(private http: HttpClient,private transfer: FileTransfer,private fileOpener: FileOpener, private file: File,private storage: Storage,private nativePageTransitions: NativePageTransitions,public platform: Platform,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
 
     this.title = getXMLDataPDF("title");
     this.link = getXMLDataPDF("link");
