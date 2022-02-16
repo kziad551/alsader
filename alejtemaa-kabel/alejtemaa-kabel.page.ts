@@ -30,22 +30,10 @@ export class AlejtemaaKabelPage implements OnInit {
   public ac: PdfViewerService = new PdfViewerService(new FileOpener,new FileTransfer,new File,new DocumentViewer,this.platform);
 
   constructor(private http: HttpClient,private document: DocumentViewer,private transfer: FileTransfer,private fileOpener: FileOpener, private file: File,private storage: Storage,private platform: Platform,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
-    this.title = getXMLDataPDF("title");
-    this.link = getXMLDataPDF("link");
-
     this.platform.pause.subscribe(e => {
       this.loadingController.dismiss();
       console.log("pause event is working");
     });
-
-    var i =0;
-    for ( i=0; i< this.title.length; i++ ) {
-     var onebook =[];
-     onebook["title"] = this.title[i];
-     onebook["link"] = this.link[i];
-     this.book.push(onebook);
-    }
-
   }
 
   ionViewWillEnter(){
