@@ -32,54 +32,12 @@
 <!--      </div>-->
 <!--      <div  class="home-box-title"> لقاء الحنانة </div>-->
 <!--  </div>-->
-  <div (click)="streamvideo('https://vps.alsader.net/%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA/%D8%B4%D8%A7%D9%87%D8%AF/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AD%D9%86%D8%A7%D9%86%D8%A9%20%D8%AC1.mp4')" class="home-box" >
+  <div (click)="streamvideo(c.link)" class="home-box" *ngFor="let c of content" >
     <div class="home-box-img">
       <img  src="\assets/headerimgs/wasaekyatvideo-icon.png" width="50" height="45">
     </div>
-    <div  class="home-box-title"> لقاء الحنانة الأول  </div>
+    <div  class="home-box-title"> {{c.title}}  </div>
   </div>
-  <div (click)="streamvideo('https://vps.alsader.net/%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA/%D8%B4%D8%A7%D9%87%D8%AF/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AD%D9%86%D8%A7%D9%86%D8%A9%20%D8%AC2.mp4')" class="home-box" >
-    <div class="home-box-img">
-      <img  src="\assets/headerimgs/wasaekyatvideo-icon.png" width="50" height="45">
-    </div>
-    <div  class="home-box-title"> لقاء الحنانة الثاني </div>
-  </div>
-  <div (click)="streamvideo('https://vps.alsader.net/%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA/%D8%B4%D8%A7%D9%87%D8%AF/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AD%D9%86%D8%A7%D9%86%D8%A9%20%D8%AC3.mp4')" class="home-box" >
-    <div class="home-box-img">
-      <img  src="\assets/headerimgs/wasaekyatvideo-icon.png" width="50" height="45">
-    </div>
-    <div  class="home-box-title"> لقاء الحنانة الثالث </div>
-  </div>
-  <div (click)="streamvideo('https://vps.alsader.net/%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA/%D8%B4%D8%A7%D9%87%D8%AF/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AD%D9%86%D8%A7%D9%86%D8%A9%204(edited).mp4')" class="home-box" >
-    <div class="home-box-img">
-      <img  src="\assets/headerimgs/wasaekyatvideo-icon.png" width="50" height="45">
-    </div>
-    <div  class="home-box-title"> لقاء الحنانة الرابع </div>
-  </div>
-  <div (click)="streamvideo('https://vps.alsader.net/%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA/%D8%B4%D8%A7%D9%87%D8%AF/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AD%D9%86%D8%A7%D9%86%D8%A9%205(edited).mp4')" class="home-box" >
-    <div class="home-box-img">
-      <img  src="\assets/headerimgs/wasaekyatvideo-icon.png" width="50" height="45">
-    </div>
-    <div  class="home-box-title"> لقاء الحنانة الخامس </div>
-  </div>
-
-  <div (click)="getlink('https://vps.alsader.net/%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA/%D8%B4%D8%A7%D9%87%D8%AF/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A3%D8%A6%D9%85%D8%A9%20%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9%20%D8%AC%D8%AF%D9%8A%D8%AF%20%D8%B9%D8%A8%D9%8A%D8%B1.mp4')" (click)="streamvideo('https://vps.alsader.net/%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA/%D8%B4%D8%A7%D9%87%D8%AF/%D9%84%D9%82%D8%A7%D8%A1%20%D8%A3%D8%A6%D9%85%D8%A9%20%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9%20%D8%AC%D8%AF%D9%8A%D8%AF%20%D8%B9%D8%A8%D9%8A%D8%B1.mp4')" class="home-box" >
-      <div class="home-box-img">
-        <img  src="\assets/headerimgs/wasaekyatvideo-icon.png" width="50" height="45">
-        </div>
-        <div  class="home-box-title"> لقاء أئمة الجمعة  </div>
-    </div>
-<!--  <div (click)="getlink('https://dl.dropboxusercontent.com/s/2hvuz7nqevebqfd/sayed-manzel-bahadli%28edited%29.mp4?dl=0')" (click)="streamvideo('https://dl.dropboxusercontent.com/s/2hvuz7nqevebqfd/sayed-manzel-bahadli%28edited%29.mp4?dl=0')" class="home-box" >-->
-<!--    <div class="home-box-img">-->
-<!--      <img  src="\assets/headerimgs/wasaekyatvideo-icon.png" width="50" height="45">-->
-<!--    </div>-->
-<!--    <div  class="home-box-title">السيد الشهيد في منزل الشيخ البهادلي  </div>-->
-<!--  </div>-->
-    <div (click)="getlink('https://vps.alsader.net/%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA/%D8%B4%D8%A7%D9%87%D8%AF/%D9%85%D8%B6%D8%BA%D9%88%D8%B7)%D8%A7%D9%84%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AE%D8%A7%D8%B5.mp4')"(click)="streamvideo('https://vps.alsader.net/%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA/%D8%B4%D8%A7%D9%87%D8%AF/%D9%85%D8%B6%D8%BA%D9%88%D8%B7)%D8%A7%D9%84%D9%84%D9%82%D8%A7%D8%A1%20%D8%A7%D9%84%D8%AE%D8%A7%D8%B5.mp4')" class="home-box" >
-      <div class="home-box-img">
-        <img  src="\assets/headerimgs/wasaekyatvideo-icon.png" width="50" height="45">
-        </div>
-        <div  class="home-box-title"> لقاء خاص</div>
-    </div>
+  
 
 </ion-content>
