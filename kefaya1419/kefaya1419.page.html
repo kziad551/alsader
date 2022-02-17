@@ -16,11 +16,11 @@
 </ion-header>
 
 <ion-content>
-  <div  class="home-box" (click)="moveToPage(c.link)" *ngFor="let c of content"  >
+  <div  class="home-box" (click)="moveToPage(v.link)" *ngFor="let v of voice"  >
     <div class="home-box-img">
       <img  src="\assets/headerimgs/voice-icon.png" width="50" height="55">
     </div>
-    <div  class="home-box-title">{{c.title}} </div>
+    <div  class="home-box-title">{{v.title}} </div>
   </div>
 </ion-content>
 
