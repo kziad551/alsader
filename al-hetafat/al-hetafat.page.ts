@@ -26,7 +26,7 @@ export class AlHetafatPage implements OnInit {
     setTimeout( () => {
       let options: NativeTransitionOptions = {
         direction: 'up',
-        duration: 4000,
+        duration: 40,
       }
       this.nativePageTransitions.flip(options);
       this.router.navigate([pageName]);
