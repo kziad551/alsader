@@ -17,6 +17,9 @@ export class AlusulShaherMuharam1418Page implements OnInit {
   public title:any[] = [];
   public content:any[] = [];
     forwardshow: boolean = true;
+    constructor(private http: HttpClient,private storage: Storage,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
+  
+    }
  ngOnInit() { 
   const url= 'https://strapi.alsader.net/api/aduruses?filters[adurus_cat][title][$eq]=bahes-kharej-ausul-muharam-1418&populate=*'
   this.http.get(url).subscribe((res)=>{
@@ -31,10 +34,7 @@ export class AlusulShaherMuharam1418Page implements OnInit {
   })
   }
   
-constructor(private http: HttpClient,private storage: Storage,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
-  
-    
- }
+
     ionViewWillEnter(){
         this.storage.get('page-aldurus').then(value => {
             this.storage.remove(value);

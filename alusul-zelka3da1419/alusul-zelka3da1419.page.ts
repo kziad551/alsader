@@ -17,7 +17,9 @@ export class AlusulZelka3da1419Page implements OnInit {
     private data:any = [];
     public title:any[] = [];
     public content:any[] = [];
-
+    constructor(private http: HttpClient,private storage: Storage,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
+   
+    }
  ngOnInit() { 
   const url= 'https://strapi.alsader.net/api/aduruses?filters[adurus_cat][title][$eq]=bahes-kharej-ausul-zulke3da-1419&populate=*'
   this.http.get(url).subscribe((res)=>{
@@ -33,10 +35,7 @@ export class AlusulZelka3da1419Page implements OnInit {
 
   }
   
-constructor(private http: HttpClient,private storage: Storage,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
-  
-   
- }
+
     ionViewWillEnter(){
         this.storage.get('page-aldurus').then(value => {
             this.storage.remove(value);
