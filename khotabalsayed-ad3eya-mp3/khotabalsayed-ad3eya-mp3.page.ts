@@ -19,9 +19,11 @@ export class KhotabalsayedAd3eyaMp3Page implements OnInit {
   public title:any[] = [];
   public content:any[] = [];
     forwardshow: boolean = true;
+    constructor(private http: HttpClient,private storage: Storage,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
+    }
  ngOnInit() { 
   this.storage.get('language-usingg').then(linkd => {
-   console.log('browser lang',linkd );
+   //console.log('browser lang',linkd );
    if( linkd == 'ar'){
       //console.log("its eng");
       this.data = [];
@@ -73,12 +75,7 @@ export class KhotabalsayedAd3eyaMp3Page implements OnInit {
 
   }
   
-constructor(private http: HttpClient,private storage: Storage,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
-  
-    
 
-    
- }
     ionViewWillEnter(){
         this.storage.get('page-khotab-alsayed-adeya').then(value => {
             this.storage.remove(value);

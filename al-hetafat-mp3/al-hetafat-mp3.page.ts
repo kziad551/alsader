@@ -17,6 +17,8 @@ export class AlHetafatMp3Page implements OnInit {
   public title:any[] = [];
   public content:any[] = [];
   forwardshow: boolean = true;
+  constructor(private http: HttpClient,private storage: Storage,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
+  }
   ngOnInit() {
    this.storage.get('language-usingg').then(linkd => {
    console.log('browser lang',linkd );
@@ -70,8 +72,7 @@ export class AlHetafatMp3Page implements OnInit {
 });
 
   }
-  constructor(private http: HttpClient,private storage: Storage,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
-  }
+  
 
   streamaudio(url: string){
     var options = {

@@ -19,9 +19,11 @@ export class AlLatmeyatMp3Page implements OnInit {
   public content:any[] = [];
 
   forwardshow: boolean = true;
+  constructor(private http: HttpClient,private storage: Storage,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
+  }
   ngOnInit() {
-this.storage.get('language-usingg').then(linkd => {
-   console.log('browser lang',linkd );
+    this.storage.get('language-usingg').then(linkd => {
+   //console.log('browser lang',linkd );
    if( linkd == 'ar'){
       //console.log("its eng");
       this.data = [];
@@ -71,8 +73,7 @@ this.storage.get('language-usingg').then(linkd => {
 
 });
   }
-  constructor(private http: HttpClient,private storage: Storage,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
-  }
+ 
 
   streamaudio(url: string){
     var options = {

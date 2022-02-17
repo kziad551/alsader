@@ -18,14 +18,19 @@ export class AyatQuraanMp3Page implements OnInit {
   public title:any[] = [];
   public content:any[] = [];
   forwardshow: boolean = true;
+
+  constructor(private http: HttpClient,private storage: Storage,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
+  }
+
   ngOnInit() {
+
    this.storage.get('language-usingg').then(linkd => {
-   console.log('browser lang',linkd );
+   //console.log('browser lang',linkd );
    if( linkd == 'ar'){
       //console.log("its eng");
       this.data = [];
       this.content = [];
-      const url= 'https://strapi.alsader.net/api/khotab-al-jomaas?filters[khotab_al_jomaa_category][title][$eq]=khotbjmaa-sowar-ayat-mp3&locale=en'
+      const url= 'https://strapi.alsader.net/api/khotab-al-jomaas?filters[khotab_al_jomaa_category][title][$eq]=khotbjmaa-sowar-ayat-mp3&locale=ar-IQ'
       this.http.get(url).subscribe((res)=>{
         this.data = res
         var i =0;
@@ -55,7 +60,7 @@ export class AyatQuraanMp3Page implements OnInit {
     else if( linkd == 'farsi'){
       this.data = [];
       this.content = [];
-      const url= 'https://strapi.alsader.net/api/khotab-al-jomaas?filters[khotab_al_jomaa_category][title][$eq]=khotbjmaa-sowar-ayat-mp3&locale=en'
+      const url= 'https://strapi.alsader.net/api/khotab-al-jomaas?filters[khotab_al_jomaa_category][title][$eq]=khotbjmaa-sowar-ayat-mp3&locale=fa-IR'
       this.http.get(url).subscribe((res)=>{
         this.data = res
         var i =0;
@@ -69,11 +74,10 @@ export class AyatQuraanMp3Page implements OnInit {
     }
 
 });
-    })
+    }
 
-  }
-  constructor(private http: HttpClient,private storage: Storage,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
-  }
+ 
+ 
 
   streamaudio(url: string){
     var options = {

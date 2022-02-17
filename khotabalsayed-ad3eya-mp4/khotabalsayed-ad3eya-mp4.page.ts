@@ -18,10 +18,11 @@ private data:any = [];
   public title:any[] = [];
   public content:any[] = [];
 
-
+  constructor(private http: HttpClient,private storage: Storage,private nativePageTransitions: NativePageTransitions ,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
+  }
  ngOnInit() { 
   this.storage.get('language-usingg').then(linkd => {
-   console.log('browser lang',linkd );
+   //console.log('browser lang',linkd );
    if( linkd == 'ar'){
       //console.log("its eng");
       this.data = [];
@@ -73,10 +74,7 @@ private data:any = [];
 
   }
   
-constructor(private http: HttpClient,private storage: Storage,private nativePageTransitions: NativePageTransitions ,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
- 
 
- }
 
     ionViewWillEnter(){
         this.storage.get('page-khotab-alsayed-adeya').then(value => {
