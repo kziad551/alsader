@@ -13,11 +13,12 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <div   (click)="streamvideo('https://vps.alsader.net/%D8%AE%D8%B7%D8%A8_%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D8%A9/%D9%84%D8%B7%D9%85%D9%8A%D8%A7%D8%AA/%D8%B4%D8%A7%D9%87%D8%AF/latmeyat_2.mp4')" class="home-box"  >
+
+  <div  (click)="getlink(c.link)" (click)="streamvideo(c.link)" class="home-box" *ngFor="let c of content"  >
     <div class="home-box-img">
       <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
     </div>
-    <div  class="home-box-title">{{ 'khotabt2' | translate }}</div>
+    <div  class="home-box-title">{{ c.title }}</div>
   </div>
 </ion-content>
 

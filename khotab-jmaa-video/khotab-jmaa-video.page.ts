@@ -10,7 +10,6 @@ import { TranslateService } from '@ngx-translate/core';
 import { VideoPlayer } from '@ionic-native/video-player/ngx';
 import { HttpClient } from "@angular/common/http";
 
-
 @Component({
   selector: 'app-khotab-jmaa-video',
   templateUrl: './khotab-jmaa-video.page.html',
@@ -21,29 +20,66 @@ export class KhotabJmaaVideoPage implements OnInit {
   private data:any = [];
   public title:any[] = [];
   public content:any[] = [];
+ 
+constructor(private http: HttpClient,private videoPlayer: VideoPlayer,private translate: TranslateService,private storage: Storage,private nativePageTransitions: NativePageTransitions ,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
+ }
+ 
  ngOnInit() { 
 
-  const url= 'https://strapi.alsader.net/api/khotab-al-jomaas?filters[khotab_al_jomaa_category][title][$eq]=khotob-jmaa-mp4&populate=*'
-    this.http.get(url).subscribe((res)=>{
-      this.data = res
-      var i =0;
-      for ( i=0; i< this.data.data.length; i++ ) {
-       var array =[];
-       array["title"] = this.data.data[i].attributes.title;
-       array["link"] = this.data.data[i].attributes.link;
-       this.content.push(array);      
-      }
-    })
+  this.storage.get('language-usingg').then(linkd => {
+   console.log('browser lang',linkd );
+   if( linkd == 'ar'){
+      //console.log("its eng");
+      this.data = [];
+      this.content = [];
+      const url= 'https://strapi.alsader.net/api/khotab-al-jomaas?filters[khotab_al_jomaa_category][title][$eq]=khotob-jmaa-mp4&locale=ar-IQ'
+      this.http.get(url).subscribe((res)=>{
+        this.data = res
+        var i =0;
+        for ( i=0; i< this.data.data.length; i++ ) {
+         var array =[];
+         array["title"] = this.data.data[i].attributes.title;
+         array["link"] = this.data.data[i].attributes.link;
+         this.content.push(array);      
+        }
+      }) 
+    }
+    else if( linkd == 'en'){
+      this.data = [];
+      this.content = [];
+      const url= 'https://strapi.alsader.net/api/khotab-al-jomaas?filters[khotab_al_jomaa_category][title][$eq]=khotob-jmaa-mp4&locale=en'
+      this.http.get(url).subscribe((res)=>{
+        this.data = res
+        var i =0;
+        for ( i=0; i< this.data.data.length; i++ ) {
+         var array =[];
+         array["title"] = this.data.data[i].attributes.title;
+         array["link"] = this.data.data[i].attributes.link;
+         this.content.push(array);      
+        }
+      }) 
+    }
+    else if( linkd == 'farsi'){
+      this.data = [];
+      this.content = [];
+      const url= 'https://strapi.alsader.net/api/khotab-al-jomaas?filters[khotab_al_jomaa_category][title][$eq]=khotob-jmaa-mp4&locale=fa-IR'
+      this.http.get(url).subscribe((res)=>{
+        this.data = res
+        var i =0;
+        for ( i=0; i< this.data.data.length; i++ ) {
+         var array =[];
+         array["title"] = this.data.data[i].attributes.title;
+         array["link"] = this.data.data[i].attributes.link;
+         this.content.push(array);      
+        }
+      }) 
+    }
 
+});
+  
+  
   }
-constructor(private http: HttpClient,private videoPlayer: VideoPlayer,private translate: TranslateService,private storage: Storage,private nativePageTransitions: NativePageTransitions ,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
-    
-
- }
     ionViewWillEnter(){
-        this.storage.get('page-khotab-alsayed').then(value => {
-            this.storage.remove(value);
-        });
         this.storage.set('page-khotab-alsayed', 'khotab-jmaa-video');
         this.storage.get('khotab-alsayed-mp4').then(link => {
             if(link){
