@@ -16,17 +16,12 @@
 </ion-header>
 
 <ion-content>
-  <div (click)="streamvideo('https://vps.alsader.net/%D9%85%D9%82%D8%A7%D8%B7%D8%B9%20%D8%AE%D8%A7%D8%B5%D8%A9/salat-dohor-maghrib.mp4')" class="home-box" >
+  <div (click)="streamvideo(c.link)" class="home-box" *ngFor="let c of content" >
     <div class="home-box-img">
       <img  src="\assets/headerimgs/wasaekyatvideo-icon.png" width="50" height="45">
       </div>
-      <div  class="home-box-title">{{ 'salatzohoreshaa' | translate }} </div>
+      <div  class="home-box-title">{{c.title }} </div>
   </div>
-  <div (click)="streamvideo('https://vps.alsader.net/%D9%85%D9%82%D8%A7%D8%B7%D8%B9%20%D8%AE%D8%A7%D8%B5%D8%A9/salat-maghrib.mp4')" class="home-box" >
-    <div class="home-box-img">
-      <img  src="\assets/headerimgs/wasaekyatvideo-icon.png" width="50" height="45">
-      </div>
-      <div  class="home-box-title"> {{ 'salatzohrayn' | translate }}</div>
-  </div>
+  
 </ion-content>
 

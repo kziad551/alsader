@@ -7,6 +7,7 @@ import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/na
 import { Platform } from '@ionic/angular';
 import { LoadingController } from '@ionic/angular';
 import { HttpClient } from "@angular/common/http";
+import { Storage } from '@ionic/storage';
 @Component({
   selector: 'app-almathaf-shahed',
   templateUrl: './almathaf-shahed.page.html',
@@ -18,20 +19,59 @@ export class AlmathafShahedPage implements OnInit {
   public title:any[] = [];
   public content:any[] = [];
 
-  constructor(private http: HttpClient,private nativePageTransitions: NativePageTransitions,private streamingMedia: StreamingMedia,public platform: Platform,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {   }
+  constructor(private storage: Storage,private http: HttpClient,private nativePageTransitions: NativePageTransitions,private streamingMedia: StreamingMedia,public platform: Platform,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {   }
   ngOnInit() {
-    const url= 'https://strapi.alsader.net/api/almathafs?filters[almathaf_cat][title][$eq]=mathaf-barani-mp4&populate=*'
-    this.http.get(url).subscribe((res)=>{
-      this.data = res
-      var i =0;
-      for ( i=0; i< this.data.data.length; i++ ) {
-       var array =[];
-       array["title"] = this.data.data[i].attributes.title;
-       array["link"] = this.data.data[i].attributes.link;
-       this.content.push(array);      
-      }
-    })
-  }
+    this.storage.get('language-usingg').then(linkd => {
+
+      if( linkd == 'ar'){
+         this.data = [];
+         this.content = [];
+         const url= 'https://strapi.alsader.net/api/almathafs?filters[almathaf_cat][title][$eq]=mathaf-barani-mp4&locale=ar-IQ'
+         this.http.get(url).subscribe((res)=>{
+           this.data = res
+           var i =0;
+           for ( i=0; i< this.data.data.length; i++ ) {
+            var array =[];
+            array["title"] = this.data.data[i].attributes.title;
+            array["link"] = this.data.data[i].attributes.link;
+            this.content.push(array);      
+           }
+         }) 
+       }
+       else if( linkd == 'en'){
+         this.data = [];
+         this.content = [];
+         const url= 'https://strapi.alsader.net/api/almathafs?filters[almathaf_cat][title][$eq]=mathaf-barani-mp4&locale=en'
+         this.http.get(url).subscribe((res)=>{
+           this.data = res
+           var i =0;
+           for ( i=0; i< this.data.data.length; i++ ) {
+            var array =[];
+            array["title"] = this.data.data[i].attributes.title;
+            array["link"] = this.data.data[i].attributes.link;
+            this.content.push(array);      
+           }
+         }) 
+       }
+       else if( linkd == 'farsi'){
+         this.data = [];
+         this.content = [];
+         const url= 'https://strapi.alsader.net/api/almathafs?filters[almathaf_cat][title][$eq]=mathaf-barani-mp4&locale=fa-IR'
+         this.http.get(url).subscribe((res)=>{
+           this.data = res
+           var i =0;
+           for ( i=0; i< this.data.data.length; i++ ) {
+            var array =[];
+            array["title"] = this.data.data[i].attributes.title;
+            array["link"] = this.data.data[i].attributes.link;
+            this.content.push(array);      
+           }
+         }) 
+       }
+   
+   });
+    }
+    
 
   
   streamvideo(url: string){

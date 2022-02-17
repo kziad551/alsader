@@ -18,10 +18,10 @@
 
 <ion-content>  
        
-  <div (click)="streamvideo('https://vps.alsader.net/%D9%85%D9%83%D8%AA%D8%A8%D8%A9/maktaba-edited.mp4')" class="home-box" >
+  <div (click)="streamvideo(c.title)" class="home-box" *ngFor="let c of content" >
     <div class="home-box-img">
       <img  src="\assets/headerimgs/wasaekyatvideo-icon.png" width="50" height="45">
       </div>
-      <div  class="home-box-title">{{ 'almaktaba' | translate }}</div>
+      <div  class="home-box-title">{{c.title}}</div>
   </div>
 </ion-content>

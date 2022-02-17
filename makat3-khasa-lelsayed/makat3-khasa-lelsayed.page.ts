@@ -5,6 +5,8 @@ import { StreamingMedia, StreamingVideoOptions } from '@ionic-native/streaming-m
 import { NavController } from '@ionic/angular';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions/ngx';
 import { HttpClient } from "@angular/common/http";
+import { Storage } from '@ionic/storage'; 
+
 @Component({
   selector: 'app-makat3-khasa-lelsayed',
   templateUrl: './makat3-khasa-lelsayed.page.html',
@@ -15,22 +17,63 @@ export class Makat3KhasaLelsayedPage implements OnInit {
   private data:any = [];
   public title:any[] = [];
   public content:any[] = [];
-  ngOnInit() {
 
-    const url= 'https://strapi.alsader.net/api/makat3-khassas?filters[makat_3_khassa_cat][title][$eq]=makate3-khasa-mp4&populate=*'
-    this.http.get(url).subscribe((res)=>{
-      this.data = res
-      var i =0;
-      for ( i=0; i< this.data.data.length; i++ ) {
-       var array =[];
-       array["title"] = this.data.data[i].attributes.title;
-       array["link"] = this.data.data[i].attributes.link;
-       this.content.push(array);      
-      }
-    })
+  constructor(private storage: Storage,private http: HttpClient,private nativePageTransitions: NativePageTransitions,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController) {
   }
-  constructor(private http: HttpClient,private nativePageTransitions: NativePageTransitions,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController) {
-  }
+  ngOnInit() {
+    this.storage.get('language-usingg').then(linkd => {
+
+      if( linkd == 'ar'){
+         this.data = [];
+         this.content = [];
+         const url= 'https://strapi.alsader.net/api/makat3-khassas?filters[makat_3_khassa_cat][title][$eq]=makate3-khasa-mp4&locale=ar-IQ'
+         this.http.get(url).subscribe((res)=>{
+           this.data = res
+           var i =0;
+           for ( i=0; i< this.data.data.length; i++ ) {
+            var array =[];
+            array["title"] = this.data.data[i].attributes.title;
+            array["link"] = this.data.data[i].attributes.link;
+            this.content.push(array);      
+           }
+         }) 
+       }
+       else if( linkd == 'en'){
+         this.data = [];
+         this.content = [];
+         const url= 'https://strapi.alsader.net/api/makat3-khassas?filters[makat_3_khassa_cat][title][$eq]=makate3-khasa-mp4&locale=en'
+         this.http.get(url).subscribe((res)=>{
+           this.data = res
+           var i =0;
+           for ( i=0; i< this.data.data.length; i++ ) {
+            var array =[];
+            array["title"] = this.data.data[i].attributes.title;
+            array["link"] = this.data.data[i].attributes.link;
+            this.content.push(array);      
+           }
+         }) 
+       }
+       else if( linkd == 'farsi'){
+         this.data = [];
+         this.content = [];
+         const url= 'https://strapi.alsader.net/api/makat3-khassas?filters[makat_3_khassa_cat][title][$eq]=makate3-khasa-mp4&locale=fa-IR'
+         this.http.get(url).subscribe((res)=>{
+           this.data = res
+           var i =0;
+           for ( i=0; i< this.data.data.length; i++ ) {
+            var array =[];
+            array["title"] = this.data.data[i].attributes.title;
+            array["link"] = this.data.data[i].attributes.link;
+            this.content.push(array);      
+           }
+         }) 
+       }
+   
+   });
+    }
+
+
+   
 
   streamvideo(url: string){
     var options: StreamingVideoOptions = {

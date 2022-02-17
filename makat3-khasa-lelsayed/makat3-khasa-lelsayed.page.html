@@ -28,10 +28,10 @@
        </div>
        <div  class="home-box-title">{{ 'shuara2' | translate }} </div>
     </div>
-  <div (click)="streamvideo('https://vps.alsader.net/%D9%85%D9%82%D8%A7%D8%B7%D8%B9%20%D8%AE%D8%A7%D8%B5%D8%A9/(new)%D9%85%D8%B9%D8%B1%D8%B6%20%D8%A7%D9%84%D9%86%D8%B5%D8%A8.mp4')" class="home-box" >
+  <div (click)="streamvideo(c.link)" class="home-box" >
     <div class="home-box-img">
-      <img  src="\assets/headerimgs/wasaekyatvideo-icon.png" width="50" height="45">
+      <img  src="\assets/headerimgs/wasaekyatvideo-icon.png" width="50" height="45" *ngFor="let c of content">
       </div>
-      <div  class="home-box-title"> {{ 'maaradnaseb' | translate }}</div>
+      <div  class="home-box-title"> {{c.title}}</div>
   </div>
 </ion-content>

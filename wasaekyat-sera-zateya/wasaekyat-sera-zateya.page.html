@@ -14,40 +14,11 @@
     </ion-toolbar>
 </ion-header>
 <ion-content>
-    <div (click)="streamvideo('https://vps.alsader.net/%D9%88%D8%AB%D8%A7%D8%A6%D9%82%D9%8A%D8%A7%D8%AA/ep1(edited).mp4')" class="home-box" >
+    <div (click)="streamvideo(c.link)" class="home-box" *ngFor="let c of content" >
         <div class="home-box-img">
             <img  src="\assets/headerimgs/wasaekyatvideo-icon.png" width="50" height="45">
         </div>
-        <div  class="home-box-title">{{ 'documentary' | translate }}  {{ '1' | translate }}</div>
+        <div  class="home-box-title">{{c.title}}</div>
     </div>
-    <div (click)="streamvideo('https://vps.alsader.net/%D9%88%D8%AB%D8%A7%D8%A6%D9%82%D9%8A%D8%A7%D8%AA/ep2(edited).mp4')" class="home-box" >
-        <div class="home-box-img">
-            <img  src="\assets/headerimgs/wasaekyatvideo-icon.png" width="50" height="45">
-        </div>
-        <div  class="home-box-title">{{ 'documentary' | translate }} {{ '2' | translate }}</div>
-    </div>
-    <div (click)="streamvideo('https://vps.alsader.net/%D9%88%D8%AB%D8%A7%D8%A6%D9%82%D9%8A%D8%A7%D8%AA/ep3(edited).mp4')" class="home-box" >
-        <div class="home-box-img">
-            <img  src="\assets/headerimgs/wasaekyatvideo-icon.png" width="50" height="45">
-        </div>
-        <div  class="home-box-title">{{ 'documentary' | translate }}  {{ '3' | translate }} </div>
-    </div>
-    <div (click)="streamvideo('https://vps.alsader.net/%D9%88%D8%AB%D8%A7%D8%A6%D9%82%D9%8A%D8%A7%D8%AA/wasaeki%201.mp4')" class="home-box" >
-        <div class="home-box-img">
-            <img  src="\assets/headerimgs/wasaekyatvideo-icon.png" width="50" height="45">
-        </div>
-        <div  class="home-box-title">{{ 'documentary' | translate }}  {{ '4' | translate }} </div>
-    </div>
-    <div (click)="streamvideo('https://vps.alsader.net/%D9%88%D8%AB%D8%A7%D8%A6%D9%82%D9%8A%D8%A7%D8%AA/wasaeki%202.mp4')" class="home-box" >
-        <div class="home-box-img">
-            <img  src="\assets/headerimgs/wasaekyatvideo-icon.png" width="50" height="45">
-        </div>
-        <div  class="home-box-title">{{ 'documentary' | translate }}  {{ '5' | translate }} </div>
-    </div>
-    <div (click)="streamvideo('https://vps.alsader.net/%D9%88%D8%AB%D8%A7%D8%A6%D9%82%D9%8A%D8%A7%D8%AA/ep6%20(edited)%20(2).mp4')" class="home-box" >
-         <div class="home-box-img">
-          <img  src="\assets/headerimgs/wasaekyatvideo-icon.png" width="50" height="45">
-         </div>
-          <div  class="home-box-title">{{ 'documentary' | translate }}  {{ '6' | translate }}</div>
-       </div>
+   
 </ion-content>
