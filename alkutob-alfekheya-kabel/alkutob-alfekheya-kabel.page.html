@@ -33,10 +33,10 @@
       </div>
       <div  class="home-box-title"> ماوراء الفقه </div>
    </div>
-    <div (click)="showLoader()" (click)="ac.downloadLL('https://alsader.net/wp-content/uploads/2021/09/فقه-الموضوعات-الحديثة_watermark_compressed.pdf','فقه الموضوعات الحديثة')"  (click)="getlink('https://alsader.net/wp-content/uploads/2021/09/فقه-الموضوعات-الحديثة_watermark_compressed.pdf')" class="home-box">
+    <div (click)="showLoader()" (click)="ac.downloadLL(c.link)" class="home-box".. *ngFor="let c of content" >
       <div class="home-box-img">
         <img  src="\assets/headerimgs/mualafat-icon.png" width="50" height="55">
         </div>
-        <div  class="home-box-title">فقه الموضوعات الحديثة</div>
+        <div  class="home-box-title">{{c.title}}</div>
     </div>
 </ion-content>

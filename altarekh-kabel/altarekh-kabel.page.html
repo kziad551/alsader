@@ -15,16 +15,11 @@
 </ion-header>
 
 <ion-content>
-  <div (click)="getlink('https://alsader.net/wp-content/uploads/pdfs_watermark/اضواء على ثورة الحسين_watermark.pdf')" (click)="showLoader()" (click)="ac.downloadKK('https://alsader.net/wp-content/uploads/pdfs_watermark/اضواء على ثورة الحسين_watermark.pdf','أضواء على ثورة الإمام الحسين')" class="home-box"  >
+  <div (click)="getlink(c.link)" (click)="showLoader()" (click)="ac.downloadKK(c.link)" class="home-box" *ngFor="let c of content"  >
     <div class="home-box-img">
       <img  src="\assets/headerimgs/mualafat-icon.png" width="50" height="55">
     </div>
-    <div  class="home-box-title">أضواء على ثورة الإمام الحسين</div>
+    <div  class="home-box-title">{{c.title}}</div>
   </div>
-  <div (click)="getlink('https://alsader.net/wp-content/uploads/2018/10/شذرات-من-فلسفة-تأريخ-الحسين-ع-watermark-1.pdf')" (click)="showLoader()" (click)="ac.downloadKK('https://alsader.net/wp-content/uploads/2018/10/شذرات-من-فلسفة-تأريخ-الحسين-ع-watermark-1.pdf','شذرات من فلسفة تأريخ الحسين  (  ع  )')" class="home-box"  >
-    <div class="home-box-img">
-      <img  src="\assets/headerimgs/mualafat-icon.png" width="50" height="55">
-    </div>
-    <div  class="home-box-title">شذرات من فلسفة تأريخ<br> الحسين  ( ع )</div>
-  </div>
+  
 </ion-content>

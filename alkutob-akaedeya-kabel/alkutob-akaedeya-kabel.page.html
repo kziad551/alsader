@@ -27,12 +27,7 @@
       </div>
       <div  class="home-box-title"> موسوعة الإمام المهدي </div>
    </div>
-   <div (click)="getlink('https://alsader.net/wp-content/uploads/2018/10/الإمام-المهديّ-المنتظرعج-watermark.pdf')" (click)="showLoader()" (click)="ac.downloadKK('https://alsader.net/wp-content/uploads/2018/10/الإمام-المهديّ-المنتظرعج-watermark.pdf','الإمام المهديّ المنتظر( عج )')" class="home-box"  >
-     <div class="home-box-img">
-       <img  src="\assets/headerimgs/mualafat-icon.png" width="50" height="55">
-       </div>
-       <div  class="home-box-title">الإمام المهديّ المنتظر<br>( عج )</div>
-   </div>
+  
     <div (click)="getlink(c.link,c.title)" (click)="
     showLoader()" (click)="
     ac.downloadLL(c.link,c.title)" class="home-box" *ngFor="let c of content" >
