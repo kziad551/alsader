@@ -6,6 +6,7 @@ import { PopoverController } from '@ionic/angular';
 import { LoadingController } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
 import { HttpClient } from "@angular/common/http";
+
 @Component({
   selector: 'app-alusul-shaher-muharam',
   templateUrl: './alusul-shaher-muharam.page.html',
@@ -16,13 +17,9 @@ export class AlusulShaherMuharamPage implements OnInit {
     private data:any = [];
     public title:any[] = [];
     public content:any[] = [];
-
-  
-constructor(private http: HttpClient,private storage: Storage,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
-
- }
  ngOnInit() { 
-    const url ='https://strapi.alsader.net/api/aduruses?filters[adurus_cat][title][$eq]=bahes-kharej-ausul-muharam-1416&populate=*'
+
+const url= 'https://strapi.alsader.net/api/aduruses?filters[adurus_cat][title][$eq]=bahes-kharej-ausul-muharam-1416&populate=*'
     this.http.get(url).subscribe((res)=>{
       this.data = res
       var i =0;
@@ -34,6 +31,10 @@ constructor(private http: HttpClient,private storage: Storage,public navCtrl: Na
       }
     })
   }
+  
+constructor(private http: HttpClient,private storage: Storage,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
+
+ }
     ionViewWillEnter(){
         this.storage.get('page-aldurus').then(value => {
             this.storage.remove(value);
