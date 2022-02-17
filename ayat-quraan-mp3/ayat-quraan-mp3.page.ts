@@ -19,16 +19,56 @@ export class AyatQuraanMp3Page implements OnInit {
   public content:any[] = [];
   forwardshow: boolean = true;
   ngOnInit() {
-    const url= 'https://strapi.alsader.net/api/khotab-al-jomaas?filters[khotab_al_jomaa_category][title][$eq]=khotbjmaa-sowar-ayat-mp3&populate=*'
-    this.http.get(url).subscribe((res)=>{
-      this.data = res
-      var i =0;
-      for ( i=0; i< this.data.data.length; i++ ) {
-       var array =[];
-       array["title"] = this.data.data[i].attributes.title;
-       array["link"] = this.data.data[i].attributes.link;
-       this.content.push(array);      
-      }
+   this.storage.get('language-usingg').then(linkd => {
+   console.log('browser lang',linkd );
+   if( linkd == 'ar'){
+      //console.log("its eng");
+      this.data = [];
+      this.content = [];
+      const url= 'https://strapi.alsader.net/api/khotab-al-jomaas?filters[khotab_al_jomaa_category][title][$eq]=khotbjmaa-sowar-ayat-mp3&locale=en'
+      this.http.get(url).subscribe((res)=>{
+        this.data = res
+        var i =0;
+        for ( i=0; i< this.data.data.length; i++ ) {
+         var array =[];
+         array["title"] = this.data.data[i].attributes.title;
+         array["link"] = this.data.data[i].attributes.link;
+         this.content.push(array);      
+        }
+      }) 
+    }
+    else if( linkd == 'en'){
+      this.data = [];
+      this.content = [];
+      const url= 'https://strapi.alsader.net/api/khotab-al-jomaas?filters[khotab_al_jomaa_category][title][$eq]=khotbjmaa-sowar-ayat-mp3&locale=en'
+      this.http.get(url).subscribe((res)=>{
+        this.data = res
+        var i =0;
+        for ( i=0; i< this.data.data.length; i++ ) {
+         var array =[];
+         array["title"] = this.data.data[i].attributes.title;
+         array["link"] = this.data.data[i].attributes.link;
+         this.content.push(array);      
+        }
+      }) 
+    }
+    else if( linkd == 'farsi'){
+      this.data = [];
+      this.content = [];
+      const url= 'https://strapi.alsader.net/api/khotab-al-jomaas?filters[khotab_al_jomaa_category][title][$eq]=khotbjmaa-sowar-ayat-mp3&locale=en'
+      this.http.get(url).subscribe((res)=>{
+        this.data = res
+        var i =0;
+        for ( i=0; i< this.data.data.length; i++ ) {
+         var array =[];
+         array["title"] = this.data.data[i].attributes.title;
+         array["link"] = this.data.data[i].attributes.link;
+         this.content.push(array);      
+        }
+      }) 
+    }
+
+});
     })
 
   }
