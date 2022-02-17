@@ -20,18 +20,56 @@ export class AlLatmeyatMp3Page implements OnInit {
 
   forwardshow: boolean = true;
   ngOnInit() {
+this.storage.get('language-usingg').then(linkd => {
+   console.log('browser lang',linkd );
+   if( linkd == 'ar'){
+      //console.log("its eng");
+      this.data = [];
+      this.content = [];
+      const url= 'https://strapi.alsader.net/api/khotab-al-jomaas?filters[khotab_al_jomaa_category][title][$eq]=khotabjmaa-latmyat-mp3&locale=ar-IQ'
+      this.http.get(url).subscribe((res)=>{
+        this.data = res
+        var i =0;
+        for ( i=0; i< this.data.data.length; i++ ) {
+         var array =[];
+         array["title"] = this.data.data[i].attributes.title;
+         array["link"] = this.data.data[i].attributes.link;
+         this.content.push(array);      
+        }
+      }) 
+    }
+    else if( linkd == 'en'){
+      this.data = [];
+      this.content = [];
+      const url= 'https://strapi.alsader.net/api/khotab-al-jomaas?filters[khotab_al_jomaa_category][title][$eq]=khotabjmaa-latmyat-mp3&locale=en'
+      this.http.get(url).subscribe((res)=>{
+        this.data = res
+        var i =0;
+        for ( i=0; i< this.data.data.length; i++ ) {
+         var array =[];
+         array["title"] = this.data.data[i].attributes.title;
+         array["link"] = this.data.data[i].attributes.link;
+         this.content.push(array);      
+        }
+      }) 
+    }
+    else if( linkd == 'farsi'){
+      this.data = [];
+      this.content = [];
+      const url= 'https://strapi.alsader.net/api/khotab-al-jomaas?filters[khotab_al_jomaa_category][title][$eq]=khotabjmaa-latmyat-mp3&locale=fa-IR'
+      this.http.get(url).subscribe((res)=>{
+        this.data = res
+        var i =0;
+        for ( i=0; i< this.data.data.length; i++ ) {
+         var array =[];
+         array["title"] = this.data.data[i].attributes.title;
+         array["link"] = this.data.data[i].attributes.link;
+         this.content.push(array);      
+        }
+      }) 
+    }
 
-    const url= 'https://strapi.alsader.net/api/khotab-al-jomaas?filters[khotab_al_jomaa_category][title][$eq]=khotabjmaa-latmyat-mp3&populate=*'
-    this.http.get(url).subscribe((res)=>{
-      this.data = res
-      var i =0;
-      for ( i=0; i< this.data.data.length; i++ ) {
-       var array =[];
-       array["title"] = this.data.data[i].attributes.title;
-       array["link"] = this.data.data[i].attributes.link;
-       this.content.push(array);      
-      }
-    })
+});
   }
   constructor(private http: HttpClient,private storage: Storage,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
   }
