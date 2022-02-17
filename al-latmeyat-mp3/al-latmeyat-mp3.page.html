@@ -13,11 +13,7 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-fab  [hidden]="forwardshow" (click)="forwardLink()"  bottom right #fab>
-    <button ion-fab>
-      <ion-icon   name="ios-redo"></ion-icon>
-    </button>
-  </ion-fab>
+
   <div  (click)="getlink(c.link)" (click)="streamvideo(c.link)" class="home-box" *ngFor="let c of content"  >
     <div class="home-box-img">
       <img  src="\assets/headerimgs/khotab-sayed-icon.png" width="50" height="45">
