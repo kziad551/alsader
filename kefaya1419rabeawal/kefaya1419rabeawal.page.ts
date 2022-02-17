@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { PopoverController } from '@ionic/angular';
 import { LoadingController } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
+import { HttpClient } from "@angular/common/http";
 @Component({
   selector: 'app-kefaya1419rabeawal',
   templateUrl: './kefaya1419rabeawal.page.html',

@@ -31,14 +31,7 @@ export class TafserBurujPage implements OnInit {
   }
   
 constructor(private http: HttpClient,private storage: Storage,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
-    this.title = getXMLDataVoice("title");
-    this.link = getXMLDataVoice("link");
-    var i =0;
-    for ( i=0; i< this.title.length; i++ ) {
-        var onevoice =[];
-        onevoice["title"] = this.title[i];
-        onevoice["link"] = this.link[i];
-        this.voice.push(onevoice);}
+
  }
 
     ionViewWillEnter(){

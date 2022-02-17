@@ -31,14 +31,6 @@ export class TafserAlaserPage implements OnInit {
   }
   forwardshow: boolean = true;
   constructor(private http: HttpClient,private storage: Storage,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
-    this.title = getXMLDataVoice("title");
-    this.link = getXMLDataVoice("link");
-    var i =0;
-    for ( i=0; i< this.title.length; i++ ) {
-      var onevoice =[];
-      onevoice["title"] = this.title[i];
-      onevoice["link"] = this.link[i];
-      this.voice.push(onevoice);}
   }
 
   ionViewWillEnter(){
@@ -92,31 +84,3 @@ export class TafserAlaserPage implements OnInit {
   }
 
 }
-
-// function getXMLDataVoice( itemname:string ) {
-//   var request = new XMLHttpRequest();
-
-//   try {
-//     request.open('GET', 'assets/aldurus-mp3/tafser/tafser-alaser.xml', false);
-//     request.send(null);
-//   } catch (err) {
-//     return '';
-//   }
-
-//   if (request.status === 200 || request.status === 0) {
-//     var parser = new DOMParser();
-//     var doc = parser.parseFromString(request.responseText, "application/xml");
-//     var voices = doc.getElementsByTagName("voice");
-//     var result = [];
-//     for (var i = 0; i < voices.length; i++) {
-//       var voice = voices[i];
-
-//       result.push(voice.getElementsByTagName(itemname)[0].childNodes[0].nodeValue)
-//     }
-
-//     return result;
-//   }
-
-//   return '';
-
-// }
