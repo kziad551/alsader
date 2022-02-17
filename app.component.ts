@@ -70,6 +70,8 @@ export class AppComponent {
     this.initializeApp();
     this.ios = platform.is('ios');
     this.android = platform.is('android');
+    this.storage.set('language-usingg', 'ar');
+
   }
   initializeApp() {
     this.platform.ready().then(() => {
@@ -80,7 +82,7 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.statusBar.backgroundColorByHexString('#131313');
       this.statusBar.overlaysWebView(true);
-
+      
     });
     this.platform.backButton.subscribe(() => {
       if (window.location.pathname == "/home") {
@@ -129,8 +131,15 @@ export class AppComponent {
 
 
   onChange($event){
+    
+    this.storage.get('language-usingg').then(value => {
+      this.storage.remove(value);
+  });
     this.translate.use($event.target.value);
+     this.storage.set('language-usingg', $event.target.value);
+     //location.reload();
   }
+
   colorTest(systemInitiatedDark) {
    if (systemInitiatedDark.matches) {
      document.body.setAttribute('data-theme', 'dark');
