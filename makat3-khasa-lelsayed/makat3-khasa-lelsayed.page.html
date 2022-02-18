@@ -28,9 +28,9 @@
        </div>
        <div  class="home-box-title">{{ 'shuara2' | translate }} </div>
     </div>
-  <div (click)="streamvideo(c.link)" class="home-box" >
+  <div (click)="streamvideo(c.link)" class="home-box" *ngFor="let c of content">
     <div class="home-box-img">
-      <img  src="\assets/headerimgs/wasaekyatvideo-icon.png" width="50" height="45" *ngFor="let c of content">
+      <img  src="\assets/headerimgs/wasaekyatvideo-icon.png" width="50" height="45" >
       </div>
       <div  class="home-box-title"> {{c.title}}</div>
   </div>
