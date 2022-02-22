@@ -13,14 +13,12 @@
       </div>
       </ion-toolbar>
   </ion-header>
-  
   <ion-content>
-      <div *ngFor="let k of khotab"  class="text-content">
-    <h2>{{k.title}}</h2>
-    <h3>الخطبة الاولى</h3>  
-    <p>{{k.text1}}</p>
-    <h3>الخطبة الثانية</h3>
-    <p>{{k.text2}}</p>
-  </div>
-  </ion-content>
-  
+    <div *ngFor="let c of content"  class="text-content">
+  <h2>{{c.title}}</h2>
+  <h3>{{c.titleP1}}</h3>  
+  <p>{{c.p1}}</p>
+  <h3>{{c.titleP2}}</h3>
+  <p>{{c.p2}}</p>
+</div>
+</ion-content>
