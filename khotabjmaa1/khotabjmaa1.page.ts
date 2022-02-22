@@ -4,67 +4,33 @@ import { StreamingMedia, StreamingVideoOptions } from '@ionic-native/streaming-m
 import { Router } from '@angular/router';
 import { PopoverController } from '@ionic/angular';
 import { LoadingController } from '@ionic/angular';
-
+import { HttpClient } from "@angular/common/http";   
+import { Storage } from '@ionic/storage';
 @Component({
   selector: 'app-khotabjmaa1',
   templateUrl: './khotabjmaa1.page.html',
   styleUrls: ['./khotabjmaa1.page.scss'],
 })
 export class Khotabjmaa1Page implements OnInit {
-  public title;
-  public text1;
-  public text2;
-  public khotab = [];
-
- ngOnInit() { 
-
+  private data:any = [];  
+  public content:any[] = [];
+  
+  constructor(private http: HttpClient,private storage: Storage,public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
   }
-  
-constructor(public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
-  
-    this.title = getXMLDataKhotab("title");
-    this.text1 = getXMLDataKhotab("text1");
-    this.text2 = getXMLDataKhotab("text2");
+  ngOnInit(){       const url= 'https://strapi.alsader.net/api/khotab-al-jomaa-docs?filterskhotab-al-jomaa-doc-cats][title][$eq]=khotab-docs&locale=ar-IQ'
+  this.http.get(url).subscribe((res)=>{
+    this.data = res
+    var i =0;
+    for ( i=0; i< this.data.data.length; i++ ) {
+      var array =[];
+      array["title"] = this.data.data[i].attributes.title;
+      array["titleP1"] = this.data.data[i].attributes.titleP1;
+      array["p1"] = this.data.data[i].attributes.p1;
+      array["titleP2"] = this.data.data[i].attributes.titleP2;
+      array["p2"] = this.data.data[i].attributes.p2;
+      this.content.push(array);      
+     }
+  }) }
 
-
-     var i =0;
-     for ( i=0; i< this.title.length; i++ ) {
-     var onekhotab =[];
-     onekhotab["title"] = this.title[i];
-     onekhotab["text1"] = this.text1[i];
-     onekhotab["text2"] = this.text2[i];
-     this.khotab.push(onekhotab);
-    }
- }
-
-
+    
 }
-
-function getXMLDataKhotab( itemname:string ) {
-  var request = new XMLHttpRequest();
-
-  try {
-    request.open('GET', 'assets/khotab-jmaa/jmaa1.xml', false);
-    request.send(null); 
-  } catch (err) {  
-    return '';
-  }
-
-  if (request.status === 200 || request.status === 0) { 
-    var parser = new DOMParser();
-    var doc = parser.parseFromString(request.responseText, "application/xml");
-    var khotab = doc.getElementsByTagName("jmaatext");
-    var result = [];
-    for (var i = 0; i < khotab.length; i++) {
-      var khotabname = khotab[i];  
-      
-      result.push(khotabname.getElementsByTagName(itemname)[0].childNodes[0].nodeValue)
-    }
-  
-    return result;
-  }
-  
-  return '';
-
-}
-
