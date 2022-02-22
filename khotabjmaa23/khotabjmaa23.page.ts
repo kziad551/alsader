@@ -60,7 +60,7 @@ export class Khotabjmaa23Page implements OnInit {
       else if( linkd == 'farsi'){
         this.data = [];
         this.content = [];
-        const url= 'https://strapi.alsader.net/api/khotab-al-jomaa-docs?filters[id][$eq]=23?filters[khotab-al-jomaa-doc-cats][title][$eq]=khotab-docs&locale=fa-IR'
+        const url= 'https://strapi.alsader.net/api/khotab-al-jomaa-docs?filters[id][$eq]=68?filters[khotab-al-jomaa-doc-cats][title][$eq]=khotab-docs&locale=fa-IR'
         this.http.get(url).subscribe((res)=>{
           this.data = res
           var i =0;
