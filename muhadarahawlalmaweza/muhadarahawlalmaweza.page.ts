@@ -4,6 +4,8 @@ import { StreamingMedia, StreamingVideoOptions } from '@ionic-native/streaming-m
 import { Router } from '@angular/router';
 import { PopoverController } from '@ionic/angular';
 import { LoadingController } from '@ionic/angular';
+import { Storage } from '@ionic/storage';
+import { HttpClient } from "@angular/common/http";
 
 @Component({
   selector: 'app-muhadarahawlalmaweza',
@@ -12,55 +14,26 @@ import { LoadingController } from '@ionic/angular';
 })
 export class MuhadarahawlalmawezaPage implements OnInit {
 
-  public title;
-  public text;
-  public mawaez = [];
-
- ngOnInit() { 
-
-  }
-  
-constructor(public navCtrl: NavController,private streamingMedia: StreamingMedia,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public loadingController: LoadingController) {
-  
-    this.title = getXMLDataMawaez("title");
-    this.text = getXMLDataMawaez("text");
-
-     var i =0;
-     for ( i=0; i< this.title.length; i++ ) {
-     var onemawaez =[];
-     onemawaez["title"] = this.title[i];
-     onemawaez["text"] = this.text[i];
-     this.mawaez.push(onemawaez);
-    }
- }
+  private data:any = [];
+  public content:any[] = [];
 
 
-}
 
-function getXMLDataMawaez( itemname:string ) {
-  var request = new XMLHttpRequest();
-
-  try {
-    request.open('GET', 'assets/mawaez-lekaat-xml/muhadarahawlalmaweza.xml', false);
-    request.send(null); 
-  } catch (err) {  
-    return '';
+  constructor(private http: HttpClient,private storage: Storage,) { 
   }
 
-  if (request.status === 200 || request.status === 0) { 
-    var parser = new DOMParser();
-    var doc = parser.parseFromString(request.responseText, "application/xml");
-    var mawaez = doc.getElementsByTagName("mawaeztext");
-    var result = [];
-    for (var i = 0; i < mawaez.length; i++) {
-      var mawaezname = mawaez[i];  
-      
-      result.push(mawaezname.getElementsByTagName(itemname)[0].childNodes[0].nodeValue)
-    }
-  
-    return result;
-  }
-  
-  return '';
-
-}
+  ngOnInit() { 
+    this.data = [];
+    this.content = [];
+    const url= 'https://strapi.alsader.net/api/mawaez-akhlakya-docs?filters[id][$eq]=3'
+    this.http.get(url).subscribe((res)=>{
+      this.data = res
+      var i =0;
+      for ( i=0; i< this.data.data.length; i++ ) {
+       var array =[];
+       array["title"] = this.data.data[i].attributes.title;
+       array["text"] = this.data.data[i].attributes.link;
+       this.content.push(array);      
+      }
+    }) 
+}}
