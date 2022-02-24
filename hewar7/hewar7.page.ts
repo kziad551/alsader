@@ -31,7 +31,7 @@ export class Hewar7Page implements OnInit {
       for ( i=0; i< this.data.data.length; i++ ) {
        var array =[];
        array["title"] = this.data.data[i].attributes.title;
-       array["text"] = this.data.data[i].attributes.link;
+       array["text"] = this.data.data[i].attributes.text;
        this.content.push(array);      
       }
     }) 
