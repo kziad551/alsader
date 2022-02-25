@@ -16,12 +16,9 @@
 
 <ion-content>  
   <div class="images">
-  <div class="one-image" *ngFor="let i of image" >
-    <img  (click)="showPhoto(i.link)" src="{{i.link}}">
-  </div>
-      <div class="one-image" >
-          <img  src="https://alsader.net/wp-content/uploads/2021/05/558-5585959_black-and-white-png-download-snow-transparent-png-1.png">
-      </div>
-   </div> 
-  
+<div class="one-image" *ngFor="let c of content" >
+<img  (click)="showPhoto(c.link)" src="{{c.link}}">
+</div>
+</div> 
+
 </ion-content>

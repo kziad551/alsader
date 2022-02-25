@@ -16,8 +16,8 @@
 
 <ion-content>  
        <div class="images">
-  <div class="one-image" *ngFor="let i of image" >
-    <img  (click)="showPhoto(i.link)" src="{{i.link}}">
+  <div class="one-image" *ngFor="let c of content" >
+    <img  (click)="showPhoto(c.link)" src="{{c.link}}">
   </div>
    </div> 
   
