@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { PopoverController } from '@ionic/angular';
 import { NavController } from '@ionic/angular';
 import { PhotoViewer } from '@ionic-native/photo-viewer/ngx';
-
+import { HttpClient } from "@angular/common/http"; 
 @Component({
   selector: 'app-mawk3-alesteshhad-suwar',
   templateUrl: './mawk3-alesteshhad-suwar.page.html',
@@ -11,26 +11,26 @@ import { PhotoViewer } from '@ionic-native/photo-viewer/ngx';
 })
 export class Mawk3AlesteshhadSuwarPage implements OnInit {
 
-  ngOnInit() {
-  }
-  public title;
-  public link;
-  public image = [];
- 
- 
-constructor(private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public navCtrl: NavController,private photoViewer: PhotoViewer) { 
-  
-   this.title = getXMLDataImage("title");
-    this.link = getXMLDataImage("link");
-
-     var i =0;
-     for ( i=0; i< this.title.length; i++ ) {
-     var oneimage =[];
-     oneimage["title"] = this.title[i];
-     oneimage["link"] = this.link[i];
-     this.image.push(oneimage);
+  private data:any = [];
+  public content:any[] = [];
+  constructor(
+    private http: HttpClient,private router: Router,private popoverCtrl: PopoverController,private popoverController: PopoverController,public navCtrl: NavController,private photoViewer: PhotoViewer) { 
     }
+
+  ngOnInit() {
+    const url= 'https://strapi.alsader.net/api/mwka-esteshhad-images'
+      this.http.get(url).subscribe((res)=>{
+        this.data = res
+        var i =0;
+        for ( i=0; i< this.data.data.length; i++ ) {
+         var array =[];
+         array["title"] = this.data.data[i].attributes.title;
+         array["link"] = this.data.data[i].attributes.link;
+         this.content.push(array);      
+        }
+      }) 
  }
+  
 
   
 showPhoto(url:string){
@@ -42,31 +42,4 @@ showPhoto(url:string){
       url = decodeURIComponent(url);
       this.photoViewer.show(url, '', options);
   }
-}
-function getXMLDataImage( itemname:string ) {
-  var request = new XMLHttpRequest();
-
-  try {
-    request.open('GET', 'assets/images-xml/mawke3-esteshhad.xml', false);
-    request.send(null); 
-  } catch (err) {  
-    return '';
-  }
-
-  if (request.status === 200 || request.status === 0) { 
-    var parser = new DOMParser();
-    var doc = parser.parseFromString(request.responseText, "application/xml");
-    var images = doc.getElementsByTagName("image");
-    var result = [];
-    for (var i = 0; i < images.length; i++) {
-      var image = images[i];  
-      
-      result.push(image.getElementsByTagName(itemname)[0].childNodes[0].nodeValue)
-    }
- 
-    return result;
-  }
-  
-  return '';
-
 }
