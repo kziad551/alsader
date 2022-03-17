@@ -12,21 +12,36 @@ import { HttpClient } from "@angular/common/http";
   styleUrls: ['./lekaat.page.scss'],
 })
 export class LekaatPage implements OnInit {
-  private data:any = [];
-  public title:any[] = [];
-  public content:any[] = [];
+  private datamp3:any = [];
+  public contentmp3:any[] = [];
+  private datamp4:any = [];
+  public contentmp4:any[] = [];
 
-    forwardshow: boolean = true;
+  forwardshow: boolean = true;
+
  ngOnInit() { 
-  const url= 'https://strapi.alsader.net/api/allekaat-wa-alhewarats?filters[lekaat_hewarat_cat][title][$eq]=lika2at-sawtya&populate=*'
-  this.http.get(url).subscribe((res)=>{
-    this.data = res
+
+  const urlmp3= 'https://strapi.alsader.net/api/allekaat-wa-alhewarats?filters[id]=1&filters[id]=2?&filters[id]=3?&filters[id]=4?&filters[id]=5?&filters[id]=6?&filters[id]=7?&filters[id]=8?&filters[id]=9?&filters[id]=10?&filters[id]=11?f&filters[id]=12?filters[lekaat_hewarat_cat][title][$eq]=lika2at-sawtya&populate=*'
+  this.http.get(urlmp3).subscribe((res)=>{
+    this.datamp3 = res
     var i =0;
-    for ( i=0; i< this.data.data.length; i++ ) {
+    for ( i=0; i< this.datamp3.data.length; i++ ) {
      var array =[];
-     array["title"] = this.data.data[i].attributes.title;
-     array["link"] = this.data.data[i].attributes.link;
-     this.content.push(array);      
+     array["title"] = this.datamp3.data[i].attributes.title;
+     array["link"] = this.datamp3.data[i].attributes.link;
+     this.contentmp3.push(array);      
+    }
+  })
+
+  const urlmp4= 'https://strapi.alsader.net/api/allekaat-wa-alhewarats?filters[id]=13&filters[id]=14?&filters[id]=15?&filters[id]=16?filters[lekaat_hewarat_cat][title][$eq]=lika2at-sawtya&populate=*'
+  this.http.get(urlmp4).subscribe((res)=>{
+    this.datamp4 = res
+    var i =0;
+    for ( i=0; i< this.datamp4.data.length; i++ ) {
+     var array =[];
+     array["title"] = this.datamp4.data[i].attributes.title;
+     array["link"] = this.datamp4.data[i].attributes.link;
+     this.contentmp4.push(array);      
     }
   })
 
@@ -84,7 +99,18 @@ constructor(private http: HttpClient,private storage: Storage,public navCtrl: Na
     }
   };
   this.streamingMedia.playAudio(url, options);
-            }
+  }
+    streamvideo(url: string){
+    var options: StreamingVideoOptions = {
+      successCallback: () => { console.log('Video played') },
+      errorCallback: (e) => { console.log('Error streaming') },
+      orientation: 'orientation',
+      shouldAutoClose: true,
+      controls: true
+    };
+  
+    this.streamingMedia.playVideo(url, options);
+    }
 
     moveToPage(pageName) {
       this.router.navigate([pageName]);
