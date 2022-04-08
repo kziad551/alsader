@@ -18,7 +18,7 @@ export class TafserTakasurPage implements OnInit {
   public title:any[] = [];
   public content:any[] = [];
   ngOnInit() { 
-        const url ='https://strapi.alsader.net/api/aduruses?filters[adurus_cat][title][$eq]=mohadarat-tafsir-tafsir-altakasur&populate=*'
+        const url ='https://strapi.alsader.net/api/aduruses?filters[adurus_cat][title][$eq]=mohadarat-tafsir-tafsir-altakathur&populate=*'
     this.http.get(url).subscribe((res)=>{
       this.data = res
       var i =0;

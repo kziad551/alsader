@@ -18,7 +18,7 @@ export class KefayarabetanePage implements OnInit {
   public title:any[] = [];
   public content:any[] = [];
   ngOnInit() {
-      const url ='https://strapi.alsader.net/api/aduruses?filters[adurus_cat][title][$eq]=kefaya-kefaya-jamade-awal-1418&populate=*'
+      const url ='https://strapi.alsader.net/api/aduruses?filters[adurus_cat][title][$eq]=kefaya-kefaya-rabe3-tane-1418&populate=*'
     this.http.get(url).subscribe((res)=>{
       this.data = res
       var i =0;
