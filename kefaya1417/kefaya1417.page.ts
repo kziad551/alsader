@@ -20,7 +20,7 @@ export class Kefaya1417Page implements OnInit {
   public content:any[] = [];
   forwardshow: boolean = true;
   ngOnInit() {
-      const url ='https://strapi.alsader.net/api/aduruses?filters[adurus_cat][title][$eq]=mohadarat-tafsir-tafsir-kefaya-kefaya-1417&populate=*'
+      const url ='https://strapi.alsader.net/api/aduruses?filters[adurus_cat][title][$eq]=kefaya-kefaya-1417&populate=*'
     this.http.get(url).subscribe((res)=>{
       this.data = res
       var i =0;
