@@ -42,7 +42,7 @@ export class Khotabjmaa19Page implements OnInit {
          else if( linkd == 'en'){
            this.data = [];
            this.content = [];
-           const url= 'https://strapi.alsader.net/api/khotab-al-jomaa-docs?filters[id][$eq]=19?filters[khotab-al-jomaa-doc-cats][title][$eq]=khotab-docs&locale=ar-IQ'
+           const url= 'https://strapi.alsader.net/api/khotab-al-jomaa-docs/158'
            this.http.get(url).subscribe((res)=>{
              this.data = res
              var i =0;
@@ -60,7 +60,7 @@ export class Khotabjmaa19Page implements OnInit {
          else if( linkd == 'farsi'){
            this.data = [];
            this.content = [];
-           const url= 'https://strapi.alsader.net/api/khotab-al-jomaa-docs?filters[id][$eq]=64?filters[khotab-al-jomaa-doc-cats][title][$eq]=khotab-docs&locale=fa-IR'
+           const url= 'https://strapi.alsader.net/api/khotab-al-jomaa-docs/64'
            this.http.get(url).subscribe((res)=>{
              this.data = res
              var i =0;

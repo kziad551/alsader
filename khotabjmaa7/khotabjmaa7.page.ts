@@ -41,7 +41,7 @@ constructor(private http: HttpClient,private storage: Storage,public navCtrl: Na
         else if( linkd == 'en'){
           this.data = [];
           this.content = [];
-          const url= 'https://strapi.alsader.net/api/khotab-al-jomaa-docs?filters[id][$eq]=7?filters[khotab-al-jomaa-doc-cats][title][$eq]=khotab-docs&locale=ar-IQ'
+          const url= 'https://strapi.alsader.net/api/khotab-al-jomaa-docs/146'
           this.http.get(url).subscribe((res)=>{
             this.data = res
             var i =0;
@@ -59,7 +59,7 @@ constructor(private http: HttpClient,private storage: Storage,public navCtrl: Na
         else if( linkd == 'farsi'){
           this.data = [];
           this.content = [];
-          const url= 'https://strapi.alsader.net/api/khotab-al-jomaa-docs?filters[id][$eq]=52?filters[khotab-al-jomaa-doc-cats][title][$eq]=khotab-docs&locale=fa-IR'
+          const url= 'https://strapi.alsader.net/api/khotab-al-jomaa-docs/52'
           this.http.get(url).subscribe((res)=>{
             this.data = res
             var i =0;

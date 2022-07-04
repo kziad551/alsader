@@ -41,7 +41,7 @@ ngOnInit() {
     else if( linkd == 'en'){
       this.data = [];
       this.content = [];
-      const url= 'https://strapi.alsader.net/api/khotab-al-jomaa-docs?filters[id][$eq]=3?filters[khotab-al-jomaa-doc-cats][title][$eq]=khotab-docs&locale=ar-IQ'
+      const url= 'https://strapi.alsader.net/api/khotab-al-jomaa-docs/142'
       this.http.get(url).subscribe((res)=>{
         this.data = res
         var i =0;
@@ -59,7 +59,7 @@ ngOnInit() {
     else if( linkd == 'farsi'){
       this.data = [];
       this.content = [];
-      const url= 'https://strapi.alsader.net/api/khotab-al-jomaa-docs?filters[id][$eq]=48?filters[khotab-al-jomaa-doc-cats][title][$eq]=khotab-docs&locale=fa-IR'
+      const url= 'https://strapi.alsader.net/api/khotab-al-jomaa-docs/48'
       this.http.get(url).subscribe((res)=>{
         this.data = res
         var i =0;
